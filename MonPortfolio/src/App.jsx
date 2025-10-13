@@ -1,4 +1,5 @@
 import Header from './components/header';
+import Lanyard from './Lanyard/Lanyard';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <main>
         {/* Your other sections */}
       </main>
+      <Lanyard/>
     </>
   );
 }
