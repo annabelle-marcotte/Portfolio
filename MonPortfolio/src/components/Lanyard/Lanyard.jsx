@@ -7,8 +7,8 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 // replace with your own imports, see the usage snippet for details
-import cardGLB from "../components/Lanyard/card.glb";  // Absolute path to public/—no ?url or ./
-import lanyard from "../components/Lanyard/lanyard.png";  // Same for PNG
+import cardGLB from "/assets/lanyard/card.glb";
+import lanyard from "/assets/lanyard/lanyard.png";
 
 import * as THREE from 'three';
 import './Lanyard.css';
@@ -74,9 +74,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
     dir = new THREE.Vector3();
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
-console.log("GLTF nodes:", nodes);
-console.log("GLTF materials:", materials);
-
   const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
@@ -144,7 +141,7 @@ console.log("GLTF materials:", materials);
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[5.5, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
@@ -158,23 +155,29 @@ console.log("GLTF materials:", materials);
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-  scale={2.25}
-  position={[0, -1.2, -0.05]}
-  onPointerOver={() => hover(true)}
-  onPointerOut={() => hover(false)}
-  onPointerUp={e => (e.target.releasePointerCapture(e.pointerId), drag(false))}
-  onPointerDown={e => (
-    e.target.setPointerCapture(e.pointerId),
-    drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
-  )}
->
-  {nodes[0] && nodes[0].geometry ? (
-    <mesh geometry={nodes[0].geometry} material={materials.Plastic} />
-  ) : null}
-  {nodes.Ribbon && nodes.Ribbon.geometry ? (
-    <mesh geometry={nodes.Ribbon.geometry} material={materials.Ribbon} />
-  ) : null}
-</group>
+            scale={2.25}
+            position={[0, -1.2, -0.05]}
+            onPointerOver={() => hover(true)}
+            onPointerOut={() => hover(false)}
+            onPointerUp={e => (e.target.releasePointerCapture(e.pointerId), drag(false))}
+            onPointerDown={e => (
+              e.target.setPointerCapture(e.pointerId),
+              drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
+            )}
+          >
+            <mesh geometry={nodes.card.geometry}>
+              <meshPhysicalMaterial
+                map={materials.base.map}
+                map-anisotropy={16}
+                clearcoat={1}
+                clearcoatRoughness={0.15}
+                roughness={0.9}
+                metalness={0.8}
+              />
+            </mesh>
+            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
+            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
+          </group>
         </RigidBody>
       </group>
       <mesh ref={band}>
