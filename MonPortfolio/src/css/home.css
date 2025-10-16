@@ -1,0 +1,127 @@
+.home-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.interactive-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.home-content {
+    position: absolute;
+    top: 30vh;
+    left: 30vh;
+    width: 40%;
+    z-index: 2;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+span {
+    color: #86b499;
+}
+
+.home-content h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #86b499;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 2rem 1rem 2rem 0;
+    transition: 0.3s ease;
+    color: #86b499;
+}
+
+.links a:hover {
+    color: white;
+    transform: scale(1.3) translateY(5px);
+    background-color: #86b499;
+    box-shadow: 0 0 10px #86b499;
+}
+
+.links a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.links img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    transition: 0.3s ease;
+}
+
+button {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border-radius: 4rem;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    border: 2px solid #86b499;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale3d(1.03);
+    background-color: #86b499;
+    box-shadow: 0 0 25px #86b499;
+}
+
+button a {
+    text-decoration: none;
+    color: #86b499;
+}
+
+button:hover a {
+    color: white;
+}
+
+.typing-text {
+    font-size: 35px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::after {
+    content: "|";
+    position: absolute;
+    width: calc(100% +8px);
+    border-left:1px solid #86b499;
+    right:-8;
+    height: 100%;
+    background-color: #86b499;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

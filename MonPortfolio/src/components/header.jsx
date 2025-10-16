@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../index.css'; // if your CSS is global
+import '../css/index.css'; // if your CSS is global
 
 function Header() {
 const [menuOpen, setMenuOpen] = useState(false);
