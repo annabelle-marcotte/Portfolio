@@ -40,6 +40,16 @@ nav a {
     border-bottom: 3px solid transparent;
 }
 
+header a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+header a:hover{
+    color: white;
+    border-bottom-color: white;
+}
 nav a:hover,
 nav a.active {
     color: white;
