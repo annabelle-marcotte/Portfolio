@@ -1,0 +1,16 @@
+.about-picture{
+    width: 100%;
+    height: 300px;
+    background-color: #86b499;
+    display: flex;
+    gap: 15px;
+}
+.about-image {
+    margin-top:15px;
+    height: 90%;
+    width:auto;
+    border-radius: 7%;
+}
+.about-image:hover{
+    cursor:grabbing;
+}

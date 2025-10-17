@@ -1,7 +1,7 @@
 import Header from './components/header';
 import Lanyard from './components/Lanyard/Lanyard';
-import HomeContent from './components/links';
-
+import HomeContent from './components/home';
+import AboutContent from './components/about';
 function App() {
   return (
     <>
@@ -12,6 +12,7 @@ function App() {
           <Lanyard />
         </div>
       </div>
+      <AboutContent />
     </>
   );
 }
