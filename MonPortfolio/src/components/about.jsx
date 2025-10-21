@@ -26,7 +26,7 @@ function AboutContent() {
             <div className="about-picture">
                 <ImageLoop
                     images={Img}
-                    speed={0.05}
+                    speed={0.08}
                     imageHeight={250}
                     gap={20}
                     fadeOutColor="#7ea38f"
