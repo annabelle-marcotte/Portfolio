@@ -22,12 +22,12 @@ function App() {
           cursorBallColor="#7ea38f"
           cursorBallSize={0}
           ballCount={30}
-          animationSize={15}
+          animationSize={15.5}
           enableMouseInteraction={false}
           enableTransparency={true}
           hoverSmoothness={0.2}
-          clumpFactor={0.5}
-          speed={0.3}
+          clumpFactor={0.40}
+          speed={0.2}
         />
         
         <HomeContent />
