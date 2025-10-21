@@ -5,7 +5,7 @@ const HomeContent = () => {
     const typingRef = useRef(null);
 
     useEffect(() => {
-        const words = ["developpeuse Full Stack", "étudiante en informatique", "passionnée de code", "mom of 5"];
+        const words = ["developpeuse Full Stack", "étudiante en informatique", "passionnée de code"];
         let index = 0;
         let charIndex = 0;
         let isDeleting = false;
