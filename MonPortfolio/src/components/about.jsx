@@ -32,7 +32,7 @@ function AboutContent() {
                     fadeOutColor="#7ea38f"
                 />
             </div>
-            <div>
+            <div className='description-about'>
                 <h1>À propos</h1>
                 <h3>Developpeuse full stack</h3>
                 <p>

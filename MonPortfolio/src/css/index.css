@@ -49,11 +49,13 @@ header a{
 header a:hover{
     color: white;
     border-bottom-color: white;
+    cursor: pointer;
 }
 nav a:hover,
 nav a.active {
     color: white;
     border-bottom-color: white;
+    cursor: pointer;
 }
 
 main {

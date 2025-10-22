@@ -8,7 +8,7 @@ import MetaBalls from './assets/ball';
 function App() {
   return (
     <ClickSpark
-      sparkColor='black'
+      sparkColor="black"
       sparkSize={10}
       sparkRadius={15}
       sparkCount={8}
@@ -16,7 +16,7 @@ function App() {
     >
       <Header />
       
-      <div className="home-container">
+      <section id="home" className="home-container">
         <MetaBalls
           color="#7ea38f"
           cursorBallColor="#7ea38f"
@@ -26,16 +26,18 @@ function App() {
           enableMouseInteraction={false}
           enableTransparency={true}
           hoverSmoothness={0.2}
-          clumpFactor={0.40}
+          clumpFactor={0.4}
           speed={0.2}
         />
-        
         <HomeContent />
         <div className="interactive-wrapper">
           <Lanyard />
         </div>
-      </div>
-      <AboutContent />
+      </section>
+
+      <section id="about">
+        <AboutContent />
+      </section>
     </ClickSpark>
   );
 }
