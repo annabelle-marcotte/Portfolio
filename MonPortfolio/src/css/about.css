@@ -1,5 +1,5 @@
 .description-about {
-    padding: 80px;
+    padding: 100px;
     width: 50%;
     text-align: center;
     margin: 0 auto; 
@@ -24,7 +24,26 @@
 
 }
 
+.description-about h1,
+.description-about h3,
+.description-about p {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease-out;
+}
 
+.description-about h3 {
+  transform: translateX(-50px);
+}
+
+.description-about p {
+  transform: translateX(-50px); 
+}
+
+.description-about .visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
 .imageloop {
     position: relative;
     overflow-x: hidden;

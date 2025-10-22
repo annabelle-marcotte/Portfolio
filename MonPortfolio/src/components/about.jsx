@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import '../css/about.css';
 import ImageLoop from '../assets/imageLoop.jsx';
 
@@ -20,6 +20,27 @@ function AboutContent() {
         { src: '/about-pictures/sherbrooke.JPEG', alt: 'Sherbrooke' },
         { src: '/about-pictures/ski.JPEG', alt: 'Ski' }
     ];
+
+    useEffect(() => {
+        const elements = document.querySelectorAll('.description-about h1, .description-about h3, .description-about p');
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        elements.forEach(el => observer.observe(el));
+
+        return () => {
+            elements.forEach(el => observer.unobserve(el));
+        };
+    }, []);
 
     return (
         <div className="about-content">
