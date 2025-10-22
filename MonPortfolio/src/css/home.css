@@ -84,7 +84,7 @@ span {
 button {
     display: inline-block;
     padding: 1rem 1.5rem;
-    background-color: #86b499;
+    background-color: white;
     border-radius: 4rem;
     font-size: 1rem;
     letter-spacing: 0.3rem;
@@ -102,7 +102,7 @@ button:hover {
 
 button a {
     text-decoration: none;
-    color: #ffffff;
+    color: #86b499;
 }
 
 button:hover a {

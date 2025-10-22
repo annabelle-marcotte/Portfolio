@@ -6,9 +6,9 @@ const HomeContent = () => {
 
     useEffect(() => {
         const words = [
-            "développeuse Full Stack",
-            "étudiante en informatique",
-            "passionnée de code",
+            "développeuse Full Stack.",
+            "étudiante en informatique.",
+            "passionnée de code.",
         ];
         let index = 0;
         let charIndex = 0;

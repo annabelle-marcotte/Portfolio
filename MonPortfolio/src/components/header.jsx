@@ -25,7 +25,7 @@ useEffect(() => {
 
   return (
     <header>
-      <a href="#">Annabelle.</a>
+      <a href="#">MonPortfolio.</a>
       <nav id="nav-menu" className={menuOpen ? 'open' : ''}>
         <a href="#" className="active">Accueil</a>
         <a href="#">À propos</a>
