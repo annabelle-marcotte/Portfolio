@@ -2,6 +2,8 @@ import Header from './components/header';
 import Lanyard from './components/Lanyard/Lanyard';
 import HomeContent from './components/home';
 import AboutContent from './components/about';
+import SkillsContent from './components/skills';
+
 import ClickSpark from './assets/clicAnimation';
 import MetaBalls from './assets/ball';
 
@@ -15,7 +17,7 @@ function App() {
       duration={400}
     >
       <Header />
-      
+
       <section id="home" className="home-container">
         <MetaBalls
           color="#7ea38f"
@@ -37,6 +39,9 @@ function App() {
 
       <section id="about">
         <AboutContent />
+      </section>
+      <section id="skills">
+        <SkillsContent />
       </section>
     </ClickSpark>
   );

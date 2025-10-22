@@ -74,28 +74,32 @@ function Header() {
 
         <a
           className={activeSection === 'skills' ? 'active' : ''}
-          onClick={() => scrollToSection('skills')}
+          onClick={(e) => scrollToSection(e, 'skills')}
         >
           Compétences
         </a>
+
         <a
           className={activeSection === 'projects' ? 'active' : ''}
-          onClick={() => scrollToSection('projects')}
+          onClick={(e) => scrollToSection(e, 'projects')}
         >
           Projets
         </a>
+
         <a
           className={activeSection === 'experience' ? 'active' : ''}
-          onClick={() => scrollToSection('experience')}
+          onClick={(e) => scrollToSection(e, 'experience')}
         >
           Expériences
         </a>
+
         <a
           className={activeSection === 'contact' ? 'active' : ''}
-          onClick={() => scrollToSection('contact')}
+          onClick={(e) => scrollToSection(e, 'contact')}
         >
           Contacts
         </a>
+
       </nav>
 
       <button
