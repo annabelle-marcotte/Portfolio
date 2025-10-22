@@ -3,6 +3,7 @@ import "../css/home.css";
 
 const HomeContent = () => {
     const typingRef = useRef(null);
+    const timeoutRef = useRef(null); // Keep track of the current timeout
 
     useEffect(() => {
         const words = [
@@ -15,35 +16,37 @@ const HomeContent = () => {
         let isDeleting = false;
         const typingElement = typingRef.current;
 
-        function type() {
-            if (typingElement) {
-                if (!isDeleting && charIndex < words[index].length) {
-                    typingElement.textContent = words[index].substring(0, charIndex + 1);
-                    charIndex++;
-                    setTimeout(type, 150);
-                } else if (isDeleting && charIndex > 0) {
-                    typingElement.textContent = words[index].substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(type, 100);
-                } else if (!isDeleting && charIndex === words[index].length) {
-                    isDeleting = true;
-                    setTimeout(type, 1000);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    index = (index + 1) % words.length;
-                    setTimeout(type, 500);
-                }
+        const type = () => {
+            if (!typingElement) return;
+
+            const currentWord = words[index];
+            typingElement.textContent = currentWord.substring(0, charIndex);
+
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                timeoutRef.current = setTimeout(type, 150);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                timeoutRef.current = setTimeout(type, 100);
+            } else if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                timeoutRef.current = setTimeout(type, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % words.length;
+                timeoutRef.current = setTimeout(type, 500);
             }
-        }
+        };
 
         type();
-        return () => clearTimeout();
+
+        // Cleanup when the component unmounts
+        return () => clearTimeout(timeoutRef.current);
     }, []);
 
     return (
         <div className="home-container">
             <div className="home-content">
-                
                 <h1>
                     Bonjour, je suis <span>Annabelle</span>!
                 </h1>
@@ -54,13 +57,13 @@ const HomeContent = () => {
                     </span>
                 </h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
                 </p>
 
                 <div className="links">
@@ -71,7 +74,6 @@ const HomeContent = () => {
                     >
                         <img src="/links/linkedin.png" alt="linkedin" />
                     </a>
-
                     <a
                         href="https://github.com/annabelle-marcotte/"
                         target="_blank"

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function ImageLoop({
   images = [],
-  speed = 0.3, // smaller = slower base speed
+  speed = 0.3,
   imageHeight = 260,
   gap = 40,
   fadeOutColor = "#7ea38f",
@@ -12,46 +12,48 @@ export default function ImageLoop({
   const [lastX, setLastX] = useState(0);
   const [velocity, setVelocity] = useState(0);
   const [offset, setOffset] = useState(0);
+  const [contentWidth, setContentWidth] = useState(0);
 
-  // ----- Auto-scroll + inertia -----
+  const duplicated = [...images, ...images];
+
+  useEffect(() => {
+    if (loopRef.current) {
+      setContentWidth(loopRef.current.scrollWidth / 2);
+    }
+  }, [images, imageHeight, gap]);
+
   useEffect(() => {
     let rafId;
-    function animate() {
-      // Apply auto speed + user drag velocity
-      setOffset((prev) => {
-        let newOffset = prev - (speed * 10 + velocity);
-        const width = loopRef.current.scrollWidth / 2;
-        if (newOffset <= -width) newOffset += width;
-        if (newOffset >= 0) newOffset -= width;
-        return newOffset;
-      });
 
-      // Apply inertia decay
+    const animate = () => {
+      setOffset((prev) => prev - (speed * 10 + velocity));
       setVelocity((v) => v * 0.95);
       rafId = requestAnimationFrame(animate);
-    }
+    };
+
     rafId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(rafId);
-  }, [velocity, speed]);
+  }, [speed, velocity]);
 
-  // ----- Mouse / touch drag -----
-  function handleDown(e) {
+  const handleDown = (e) => {
     setIsDragging(true);
     setLastX(e.clientX || e.touches?.[0].clientX);
-  }
-  function handleMove(e) {
+  };
+
+  const handleMove = (e) => {
     if (!isDragging) return;
     const x = e.clientX || e.touches?.[0].clientX;
     const delta = x - lastX;
     setLastX(x);
-    setVelocity(delta * 0.3); // how strongly drag affects scroll
-  }
-  function handleUp() {
-    setIsDragging(false);
-  }
+    setVelocity(delta * 0.3);
+  };
 
-  // Duplicate images for seamless loop
-  const duplicated = [...images, ...images];
+  const handleUp = () => setIsDragging(false);
+
+  const visualOffset =
+    contentWidth > 0
+      ? ((offset % contentWidth) + contentWidth) % contentWidth
+      : 0;
 
   return (
     <div
@@ -77,7 +79,7 @@ export default function ImageLoop({
           display: "flex",
           alignItems: "center",
           gap: `${gap}px`,
-          transform: `translateX(${offset}px)`,
+          transform: `translateX(-${visualOffset}px)`,
           willChange: "transform",
           transition: isDragging ? "none" : "transform 0.05s linear",
         }}
@@ -93,9 +95,7 @@ export default function ImageLoop({
               borderRadius: "12px",
               flexShrink: 0,
               objectFit: "cover",
-              transition: "transform 0.3s ease",
             }}
-            className="loop-image"
           />
         ))}
       </div>
