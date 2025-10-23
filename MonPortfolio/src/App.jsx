@@ -3,6 +3,7 @@ import Lanyard from './components/Lanyard/Lanyard';
 import HomeContent from './components/home';
 import AboutContent from './components/about';
 import SkillsContent from './components/skills';
+import ProjetContent from './components/projet';
 
 import ClickSpark from './assets/clicAnimation';
 import MetaBalls from './assets/ball';
@@ -43,6 +44,9 @@ function App() {
       <section id="skills">
         <SkillsContent />
       </section>
+      {/* <section id="projet">
+        <ProjetContent />
+      </section> */}
     </ClickSpark>
   );
 }

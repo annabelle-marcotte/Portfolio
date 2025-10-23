@@ -4,7 +4,7 @@ import '../css/skills.css';
 function SkillsContent() {
 
     useEffect(() => {
-        const skillBoxes = document.querySelectorAll('.section-skills > div');
+        const skillBoxes = document.querySelectorAll('.section-skills > div, .skills-content h1');
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -30,7 +30,7 @@ function SkillsContent() {
 
             <div className='section-skills'>
                 <div>
-                    Font-end
+                    <h2>Font-end</h2>
                     <div className="skills-grid">
                         
                         <div className="skill-box">
@@ -48,7 +48,7 @@ function SkillsContent() {
                     </div>
                 </div>
                 <div>
-                    Back-end
+                    <h2>Back-end</h2>
                     <div className="skills-grid">
                         <div className="skill-box">
                             <img src="/logo/languages/csharp.png" alt="C#" title="C#" />
@@ -66,7 +66,7 @@ function SkillsContent() {
                     </div>
                 </div>
                 <div>
-                    Base de données
+                    <h2>Base de données</h2>
                     <div className="skills-grid">
                         <div className="skill-box">
                             <img src="/logo/db/mongodb.png" alt="mongoDb" title="MongoDb" />
@@ -87,7 +87,7 @@ function SkillsContent() {
                     </div>
                 </div>
                 <div>
-                    Outils
+                    <h2>Outils</h2>
                     <div className="skills-grid">
                         <div className="skill-box">
                             <img src="/logo/outils/androidstudio.png" alt="Android Studio" title="Android Studio" />

@@ -80,8 +80,8 @@ function Header() {
         </a>
 
         <a
-          className={activeSection === 'projects' ? 'active' : ''}
-          onClick={(e) => scrollToSection(e, 'projects')}
+          className={activeSection === 'projet' ? 'active' : ''}
+          onClick={(e) => scrollToSection(e, 'projet')}
         >
           Projets
         </a>
