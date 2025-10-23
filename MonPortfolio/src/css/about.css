@@ -2,15 +2,15 @@
     padding: 100px;
     width: 50%;
     text-align: center;
-    margin: 0 auto; 
-    cursor:default;
+    margin: 0 auto;
+    cursor: default;
 }
 
 
 .description-about h1 {
     font-size: 4rem;
     font-weight: 900;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     color: #86b499;
 }
 
@@ -19,31 +19,51 @@
     margin-bottom: 2rem;
     font-weight: 700;
 }
-.description-about p{
+
+.description-about p {
     font-size: 20px;
 
 }
 
+.about-line {
+    width: 0;
+    height: 5px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #86b499, #c0e0c6);
+    opacity: 0;
+    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.about-line.visible {
+    width: 250px;
+    opacity: 1;
+}
+
+
+
 .description-about h1,
 .description-about h3,
-.description-about p {
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 0.8s ease-out;
+.description-about p,
+.about-line {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease-out;
 }
 
 .description-about h3 {
-  transform: translateX(-50px);
+    transform: translateX(-50px);
 }
 
 .description-about p {
-  transform: translateX(-50px); 
+    transform: translateX(-50px);
 }
 
 .description-about .visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }
+
 .imageloop {
     position: relative;
     overflow-x: hidden;

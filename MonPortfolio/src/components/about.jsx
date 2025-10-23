@@ -22,7 +22,7 @@ function AboutContent() {
     ];
 
     useEffect(() => {
-        const elements = document.querySelectorAll('.description-about h1, .description-about h3, .description-about p');
+        const elements = document.querySelectorAll('.description-about h1, .description-about h3, .description-about p, .about-line');
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -66,6 +66,7 @@ function AboutContent() {
                     culpa qui officia deserunt mollit anim id est laborum
                 </p>
             </div>
+            <div className='about-line'></div>
         </div>
     );
 }
