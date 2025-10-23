@@ -7,19 +7,19 @@
 }
 
 .skills-content h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 0;
-  color: #86b499;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 1.5s ease-out;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    color: #86b499;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1.5s ease-out;
 }
 
 .skills-content h1.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-skills {
@@ -55,26 +55,27 @@
     transition: height 3s ease-out, opacity 3s ease-out, padding 3s ease-out;
 }
 
-.section-skills > div h2 {
+.section-skills>div h2 {
     margin: 0 0 15px 0;
     font-size: 1.6rem;
     font-weight: 800;
     color: white;
 }
+
 .section-skills>div.visible {
     height: 450px;
     opacity: 1;
     padding: 20px;
 
 }
- 
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
     margin-top: 20px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .skill-box {

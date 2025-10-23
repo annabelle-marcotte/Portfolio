@@ -1,0 +1,15 @@
+.projet-content {
+    width: auto;
+    height: 700px;
+    margin-top: 70px;
+    background-color:#86b499;
+}
+
+.projet-content h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    color: white;
+    padding: 50px;
+}
+

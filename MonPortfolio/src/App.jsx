@@ -4,6 +4,8 @@ import HomeContent from './components/home';
 import AboutContent from './components/about';
 import SkillsContent from './components/skills';
 import ProjetContent from './components/projet';
+import ExperienceContent from './components/exeperience';
+import ContactsContent from './components/contacts';
 
 import ClickSpark from './assets/clicAnimation';
 import MetaBalls from './assets/ball';
@@ -44,9 +46,16 @@ function App() {
       <section id="skills">
         <SkillsContent />
       </section>
-      {/* <section id="projet">
+      <section id="projet">
         <ProjetContent />
-      </section> */}
+      </section>
+      <section id="experience">
+        <ExperienceContent />
+      </section>
+
+      <section id="contacts">
+        <ContactsContent />
+      </section>
     </ClickSpark>
   );
 }
