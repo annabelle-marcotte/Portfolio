@@ -1,3 +1,4 @@
 put everything adaptative 
 
 faire en sorte que when you press on about it shows the images too and not competence
+

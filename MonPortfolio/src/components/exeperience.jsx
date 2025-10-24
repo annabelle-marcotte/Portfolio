@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../css/experience.css";
 
 const ExperienceContent = () => {
-
+    
     return (
-        <div class='experience-content'>
+        <div className="experience-content">
             <h1>Mes Expériences</h1>
 
         </div>

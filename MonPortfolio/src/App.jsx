@@ -53,9 +53,9 @@ function App() {
         <ExperienceContent />
       </section>
 
-      <section id="contacts">
+      {/* <section id="contacts">
         <ContactsContent />
-      </section>
+      </section> */}
     </ClickSpark>
   );
 }

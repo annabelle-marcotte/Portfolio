@@ -9,7 +9,6 @@
 .skills-content h1 {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 0;
     color: #86b499;
     text-align: center;
     opacity: 0;
@@ -29,6 +28,7 @@
     gap: 20px;
     flex-wrap: wrap;
     margin: 50px 0;
+    margin-bottom: 150px;
 }
 
 .section-skills>div {

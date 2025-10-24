@@ -1,5 +1,5 @@
 .home-container {
-    position: relative; /* Already have this – keeps children positioned relative to it */
+    position: relative; 
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -9,13 +9,14 @@
 
 .home-content {
     position: absolute;
-    top: 30vh;
-    left: 30vh;
+    top: 30%;
+    left: 15%;
     width: 40%;
     z-index: 2; 
     padding: 20px;
     overflow-y: auto;
     cursor: default;
+    max-width: 600px;
 }
 
 .interactive-wrapper {
@@ -29,8 +30,8 @@
 
 .metaballs-container {
     position: absolute;
-    top: -150;
-    left: -325px;
+    top: 4.5%;
+    left: -17%;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -38,7 +39,7 @@
 
 
 .home-content h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 900;
 }
 
@@ -47,7 +48,7 @@ span {
 }
 
 .home-content h3 {
-    font-size: 2.4rem;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -137,3 +138,81 @@ button:hover a {
     100% { opacity: 1; }
 }
 
+
+@media (max-width: 1200px) {
+    .home-content {
+        top: 20%;
+        left: 5%;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .links a {
+        width: 2.8rem;
+        height: 2.8rem;
+        margin: 0.5rem;
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+    .home-content {
+        top: 25%;
+        left: 0;
+        width: 100%;
+    }
+
+    .interactive-wrapper {
+        display: none;
+    }
+
+    .metaballs-container {
+        display: none;
+    }
+
+    .links a {
+        width: 3rem;
+        height: 3rem;
+        border-color: #86b499;
+    color: #86b499;
+    }
+    .links a:hover {
+    color: #86b499;
+    background-color: #86b499;
+    box-shadow: 0 0 10px #86b499;
+  }
+  .links img {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(469%) hue-rotate(95deg) brightness(90%) contrast(88%);
+   
+  }
+  .links img:hover {
+  filter: brightness(0) invert(1);
+  }
+  button {
+    background-color: #86b499;
+    border-color: #86b499;
+    margin-top: 2%;
+  }
+    button:hover {
+    background-color: #86b499;
+    box-shadow: 0 0 25px #86b499;
+  }
+
+  button a {
+    color: white;
+  }
+
+  button:hover a {
+    color: white;
+  }
+    .typing-text span::after {
+    border-left: 1px solid #86b499;
+    background-color: #86b499;
+  }
+
+  span {
+    color: #86b499;
+  }
+}
