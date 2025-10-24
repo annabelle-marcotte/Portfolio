@@ -1,4 +1,6 @@
-put everything adaptative 
+put everything adaptative, 
+fix issuethe issue is you can scroll and itll go to the side i think its because of the lanyard but check
+
 
 faire en sorte que when you press on about it shows the images too and not competence
 

@@ -205,6 +205,10 @@
     cursor: default;
 }
 
+.description-about h1 {
+    font-size: 3rem;
+}
+
 }
 
 @media (max-width: 800px) {
@@ -228,7 +232,7 @@
 }
 
 .description-about p {
-    font-size: 20px;
+    font-size: 17px;
 
 }
 
