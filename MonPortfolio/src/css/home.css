@@ -1,5 +1,5 @@
 .home-container {
-    position: relative; 
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -12,7 +12,7 @@
     top: 30%;
     left: 15%;
     width: 40%;
-    z-index: 2; 
+    z-index: 2;
     padding: 20px;
     overflow-y: auto;
     cursor: default;
@@ -126,16 +126,25 @@ button:hover a {
     content: "|";
     position: absolute;
     width: calc(100% +8px);
-    border-left:1px solid #ffffff;
-    right:-8;
+    border-left: 1px solid #ffffff;
+    right: -8;
     height: 100%;
     background-color: #ffffff;
     animation: cursor 0.6s infinite;
 }
+
 @keyframes cursor {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -150,7 +159,7 @@ button:hover a {
     .interactive-wrapper {
         display: none;
     }
-    
+
     .metaballs-container {
         top: 5%;
         left: 0.1%;
@@ -162,12 +171,12 @@ button:hover a {
         margin: 0.5rem;
     }
 
-    
+
 }
 
 @media (max-width: 800px) {
     .home-content {
-        top: 20%;
+        top: 25%;
         left: 0;
         width: 100%;
     }
@@ -179,53 +188,60 @@ button:hover a {
     .metaballs-container {
         display: none;
     }
+
     .typing-text {
-    font-size: 25px;
-    font-weight: 600;
-    min-width: 280px;
-}
+        font-size: 25px;
+        font-weight: 600;
+        min-width: 280px;
+    }
 
     .links a {
         width: 3rem;
         height: 3rem;
         border-color: #86b499;
-    color: #86b499;
+        color: #86b499;
     }
+
     .links a:hover {
-    color: #86b499;
-    background-color: #86b499;
-    box-shadow: 0 0 10px #86b499;
-  }
-  .links img {
-    filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(469%) hue-rotate(95deg) brightness(90%) contrast(88%);
-   
-  }
-  .links img:hover {
-  filter: brightness(0) invert(1);
-  }
-  button {
-    background-color: #86b499;
-    border-color: #86b499;
-    margin-top: 2%;
-  }
+        color: #86b499;
+        background-color: #86b499;
+        box-shadow: 0 0 10px #86b499;
+    }
+
+    .links img {
+        filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(469%) hue-rotate(95deg) brightness(90%) contrast(88%);
+
+    }
+
+    .links img:hover {
+        filter: brightness(0) invert(1);
+    }
+
+    button {
+        background-color: #86b499;
+        border-color: #86b499;
+        margin-top: 2%;
+    }
+
     button:hover {
-    background-color: #86b499;
-    box-shadow: 0 0 25px #86b499;
-  }
+        background-color: #86b499;
+        box-shadow: 0 0 25px #86b499;
+    }
 
-  button a {
-    color: white;
-  }
+    button a {
+        color: white;
+    }
 
-  button:hover a {
-    color: white;
-  }
+    button:hover a {
+        color: white;
+    }
+
     .typing-text span::after {
-    border-left: 1px solid #86b499;
-    background-color: #86b499;
-  }
+        border-left: 1px solid #86b499;
+        background-color: #86b499;
+    }
 
-  span {
-    color: #86b499;
-  }
+    span {
+        color: #86b499;
+    }
 }

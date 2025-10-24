@@ -193,3 +193,43 @@
         transition: none !important;
     }
 }
+
+
+@media (max-width: 1200px) {
+
+    .description-about {
+    padding: 100px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    cursor: default;
+}
+
+}
+
+@media (max-width: 800px) {
+    .description-about {
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+.description-about h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    margin-top: -30%;
+    color: #86b499;
+}
+
+.description-about h3 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.description-about p {
+    font-size: 20px;
+
+}
+
+}
