@@ -141,12 +141,20 @@ button:hover a {
 
 @media (max-width: 1200px) {
     .home-content {
-        top: 20%;
-        left: 5%;
+        top: 30%;
+        left: 15%;
         width: 100%;
         text-align: center;
     }
 
+    .interactive-wrapper {
+        display: none;
+    }
+    
+    .metaballs-container {
+        top: 5%;
+        left: 0.1%;
+    }
 
     .links a {
         width: 2.8rem;
@@ -159,7 +167,7 @@ button:hover a {
 
 @media (max-width: 800px) {
     .home-content {
-        top: 25%;
+        top: 20%;
         left: 0;
         width: 100%;
     }
@@ -171,6 +179,11 @@ button:hover a {
     .metaballs-container {
         display: none;
     }
+    .typing-text {
+    font-size: 25px;
+    font-weight: 600;
+    min-width: 280px;
+}
 
     .links a {
         width: 3rem;
