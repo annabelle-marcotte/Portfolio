@@ -10,7 +10,7 @@ function Header() {
     { id: 'about', label: 'À propos' },
     { id: 'skills', label: 'Compétences' },
     { id: 'projet', label: 'Projets' },
-    { id: 'experience', label: 'Expériences' },
+    // { id: 'experience', label: 'Expériences' },
     { id: 'contacts', label: 'Contacts' },
   ];
 
