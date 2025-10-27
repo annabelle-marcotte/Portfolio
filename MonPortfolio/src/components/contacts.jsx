@@ -18,7 +18,7 @@ const ContactsContent = () => {
                         <img src="/contact/mail.png" alt="email" />
                         <div>
                             <strong>Email</strong><br />
-                            <span>aj.marcotte@icloud.com</span>
+                            <span> <a href="mailto:aj.marcotte@icloud.com">aj.marcotte@icloud.com</a></span>
                         </div>
                     </div>
 
@@ -26,7 +26,7 @@ const ContactsContent = () => {
                         <img src="/contact/phone.png" alt="phone" />
                         <div>
                             <strong>Téléphone</strong><br />
-                            <span>(438) 925-7353</span>
+                            <span><a href="tel:4389257353">(438) 925-7353</a></span>
                         </div>
                     </div>
 
@@ -58,7 +58,9 @@ const ContactsContent = () => {
                         </a>
                         </div>
                         <div className="icon-box">
-                            <img src="/contact/mail.png" alt="mail" />
+                            <a href="mailto:aj.marcotte@icloud.com">
+                                <img src="/contact/mail.png" alt="mail" />
+                                </a>
                         </div>
                     </div>
 

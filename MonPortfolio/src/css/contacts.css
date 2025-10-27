@@ -8,6 +8,7 @@
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     cursor: default;
+    flex-wrap: wrap; 
 }
 
 .contacts-header h1 {
@@ -48,7 +49,15 @@
     gap: 15px;
     margin-bottom: 25px;
 }
-
+.contact-item a {
+    text-decoration: none;
+    color:#0f172a;
+    transition: color 0.3 ease;
+}
+.contact-item a:hover {
+    color:#a1cfb6;
+    text-decoration:underline;
+}
 .contact-item img {
     width: 40px;
     height: 40px;
@@ -158,4 +167,89 @@
 .user-content button:hover {
     background-color: #a1cfb6;
     transform: scale(1.02);
+}
+
+@media (max-width: 1200px) {
+    .contacts-content {
+        padding: 80px;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-me, .user-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .contacts-content {
+        padding: 50px 30px;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts-header h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .info-me h3 {
+        font-size: 1.4rem;
+    }
+
+    .info-me p {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .user-content {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .user-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-box {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon-box img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-content {
+        padding: 30px 20px;
+    }
+
+    .contacts-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .user-content input,
+    .user-content textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .user-content button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
 }
