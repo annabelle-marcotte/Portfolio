@@ -4,12 +4,13 @@
     text-align: center;
     margin: 0 auto;
     cursor: default;
+    font-family: "Poppins", sans-serif;
 }
 
 
 .description-about h1 {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 50px;
     color: #86b499;
 }

@@ -4,6 +4,8 @@
     text-align: center;
     margin: 0 auto;
     cursor: default;
+    
+    font-family: "Poppins", sans-serif;
 }
 
 .skills-content h1 {
@@ -110,12 +112,16 @@
     height: 40px;
     object-fit: contain;
     cursor: pointer;
+    
+}
+.skills-content {
+    margin-bottom: -45%;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap:10px;
     justify-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -139,5 +145,9 @@
     opacity: 1;
     padding: 20px;
 
+}
+
+.skills-content {
+    margin-bottom: -20%;
 }
 }
