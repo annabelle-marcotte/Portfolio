@@ -7,14 +7,23 @@
     color: #7ea38f;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
+    cursor: default;
 }
-.contacts-content h1{
-     font-size: 3rem;
+
+.contacts-header h1 {
+    font-size: 3rem;
     font-weight: 900;
     margin-bottom: 0;
     color: #7ea38f;
-    padding: 50px;
+    font-family: "Poppins", sans-serif;
 }
+
+.contacts-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+}
+
 
 .info-me {
     flex: 1;
@@ -32,6 +41,7 @@
     margin-bottom: 40px;
     font-size: 1rem;
 }
+
 .contact-item {
     display: flex;
     align-items: center;
@@ -47,6 +57,7 @@
     background-color: #7ea38f;
     transition: transform 0.3s, background-color 0.3s;
 }
+
 .contact-item img:hover {
     transform: scale(1.1);
     background-color: #a1cfb6;
