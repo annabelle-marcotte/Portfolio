@@ -21,6 +21,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
     "@react-three/rapier": "^2.1.0",

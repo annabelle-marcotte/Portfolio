@@ -169,6 +169,14 @@
     transform: scale(1.02);
 }
 
+.form-error {
+    color: #ff4d4d;
+    font-size: 1rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
 @media (max-width: 1200px) {
     .contacts-content {
         padding: 80px;
