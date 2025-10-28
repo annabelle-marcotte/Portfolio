@@ -1,11 +1,10 @@
 footer {
-    background: linear-gradient(135deg, #7ea38f), #5a806c;
+    background: linear-gradient(135deg, #7ea38f, #5a806c) !important;
     color: #e5e5e5;
     padding: 60px 40px 30px 40px;
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
-
 .footer-container {
     display: flex;
     justify-content: space-between;
