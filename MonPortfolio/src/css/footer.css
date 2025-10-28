@@ -128,10 +128,20 @@ footer {
 }
 
 @media (max-width: 900px) {
+    footer {
+        padding: 50px 25px 25px 25px;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 35px;
+    }
+
+    .footer-column h2,
+    .quick-links h1 {
+        font-size: 1.4rem;
     }
 
     .contact-info .contact-item {
@@ -140,5 +150,54 @@ footer {
 
     .quick-links a {
         text-align: center;
+        font-size: 1rem;
+    }
+}
+
+/* ✅ MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    footer {
+        padding: 40px 20px 25px 20px;
+    }
+
+    .footer-column h2,
+    .quick-links h1 {
+        font-size: 1.2rem;
+    }
+
+    .footer-column p {
+        font-size: 0.9rem;
+    }
+
+    .footer-column .social-links a img {
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+    }
+
+    .contact-info .contact-item img {
+        width: 28px;
+        height: 28px;
+        padding: 6px;
+    }
+
+    .contact-info .contact-item {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .quick-links a {
+        font-size: 0.9rem;
+        margin: 6px 0;
+        padding: 4px 8px;
+    }
+
+    .footer-line {
+        margin: 25px auto 15px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
     }
 }
