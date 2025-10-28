@@ -15,12 +15,12 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.12));
-    
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+
     font-family: "Poppins", sans-serif;
 }
 
-header > a {
+header>a {
     text-decoration: none;
     color: black;
     font-size: clamp(1.5rem, 4vw, 1.875rem);
@@ -42,17 +42,19 @@ nav a {
     border-bottom: 3px solid transparent;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: black;
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-header a:hover{
+
+header a:hover {
     color: white;
     border-bottom-color: white;
     cursor: pointer;
 }
+
 nav a:hover,
 nav a.active {
     color: white;
@@ -61,7 +63,7 @@ nav a.active {
 }
 
 main {
-    padding-top: clamp(80px, 10vh, 100px); /* Adaptive padding */
+    padding-top: clamp(80px, 10vh, 100px);
 }
 
 .hamburger {
@@ -74,10 +76,26 @@ main {
     padding: 0.5rem;
 }
 
-.trad-content a{
-font-size:17px;
+.trad-content{
+    font-size: 17px;
 
 }
+
+.trad-content button {
+    background-color: transparent;
+    border: 2px solid #86b499;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trad-content button:hover {
+    background-color: #86b499;
+    color: #fff;
+}
+
 @media (max-width: 995px) {
     .hamburger {
         display: block;
@@ -87,7 +105,8 @@ font-size:17px;
         position: absolute;
         top: 100%;
         right: 0;
-        width: clamp(200px, 60%, 300px); /* Adaptive width */
+        width: clamp(200px, 60%, 300px);
+        /* Adaptive width */
         background-color: #86b499;
         border-left: 3px solid white;
         border-bottom: 3px solid white;
@@ -106,7 +125,8 @@ font-size:17px;
     }
 
     nav a {
-        font-size: clamp(1.2rem, 3vw, 1.6rem); /* Adaptive font size */
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        /* Adaptive font size */
     }
 }
 
@@ -115,7 +135,7 @@ font-size:17px;
         padding: 0.75rem 4%;
     }
 
-    header > a {
+    header>a {
         font-size: clamp(1.2rem, 3.5vw, 1.5rem);
     }
 
@@ -135,4 +155,3 @@ font-size:17px;
         font-size: 1.25rem;
     }
 }
-

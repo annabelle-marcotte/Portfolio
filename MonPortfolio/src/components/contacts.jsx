@@ -1,14 +1,16 @@
 import "../css/contacts.css";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useTranslation } from "react-i18next";
 
 const ContactsContent = () => {
+    const { t } = useTranslation();
     const [state, handleSubmit] = useForm("xjkpgwgd");
     const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
         if (state.succeeded) {
-            setShowPopup(true); 
+            setShowPopup(true);
             const form = document.querySelector("form");
             if (form) form.reset();
 
@@ -25,29 +27,28 @@ const ContactsContent = () => {
     return (
         <div>
             <div className="contacts-header">
-                <h1>Contact</h1>
+                <h1>{t("contact_title")}</h1>
             </div>
 
             <div className="contacts-content">
                 <div className="info-me">
-                    <h3>Contact Information</h3>
-                    <p>
-                        N'hésitez pas à me contacter via l'un des canaux suivants.
-                        Je vous répondrai dans les plus brefs délais !
-                    </p>
+                    <h3>{t("contact_info_title")}</h3>
+                    <p>{t("contact_info_text")}</p>
 
                     <div className="contact-item">
                         <img src="/contact/mail.png" alt="email" />
                         <div>
-                            <strong>Email</strong><br />
-                            <span><a href="mailto:aj.marcotte@icloud.com">aj.marcotte@icloud.com</a></span>
+                            <strong>{t("contact_email")}</strong><br />
+                            <span>
+                                <a href="mailto:aj.marcotte@icloud.com">aj.marcotte@icloud.com</a>
+                            </span>
                         </div>
                     </div>
 
                     <div className="contact-item">
                         <img src="/contact/phone.png" alt="phone" />
                         <div>
-                            <strong>Téléphone</strong><br />
+                            <strong>{t("contact_phone")}</strong><br />
                             <span><a href="tel:4389257353">(438) 925-7353</a></span>
                         </div>
                     </div>
@@ -55,12 +56,12 @@ const ContactsContent = () => {
                     <div className="contact-item">
                         <img src="/contact/location.png" alt="location" />
                         <div>
-                            <strong>Localisation</strong><br />
+                            <strong>{t("contact_location")}</strong><br />
                             <span>Québec, Canada</span>
                         </div>
                     </div>
 
-                    <h2>Connecte-toi avec moi :</h2>
+                    <h2>{t("contact_social_title")}</h2>
                     <div className="social-links">
                         <div className="icon-box">
                             <a href="https://www.linkedin.com/in/annabelle-marcotte/" target="_blank" rel="noopener noreferrer">
@@ -81,28 +82,26 @@ const ContactsContent = () => {
                 </div>
 
                 <div className="user-content">
-                    <h3>ENVOIE-MOI UN MESSAGE</h3>
+                    <h3>{t("contact_form_title")}</h3>
                     <form onSubmit={onSubmit}>
-                        <label htmlFor="name">Votre nom</label>
-                        <input id="name" type="text" name="name" placeholder="Votre nom" required />
+                        <label htmlFor="name">{t("contact_name_label")}</label>
+                        <input id="name" type="text" name="name" placeholder={t("contact_name_placeholder")} required />
 
-                        <label htmlFor="email">Votre courriel</label>
-                        <input id="email" type="email" name="email" placeholder="YourEmail@LikeThis.com" required />
+                        <label htmlFor="email">{t("contact_email_label")}</label>
+                        <input id="email" type="email" name="email" placeholder={t("contact_email_placeholder")} required />
                         <ValidationError prefix="Email" field="email" errors={state.errors} className="form-error" />
 
-                        <label htmlFor="message">Votre message</label>
-                        <textarea id="message" name="message" placeholder="Votre message ici..." required />
+                        <label htmlFor="message">{t("contact_message_label")}</label>
+                        <textarea id="message" name="message" placeholder={t("contact_message_placeholder")} required />
                         <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-                        <button type="submit" disabled={state.submitting}>Envoyer</button>
+                        <button type="submit" disabled={state.submitting}>{t("contact_submit_button")}</button>
                     </form>
                 </div>
             </div>
 
             {showPopup && (
-                <div className="popup-message">
-                    <p>Merci pour votre message !<br />Je vous répondrai dès que possible.</p>
-                </div>
+                <div className="popup-message" dangerouslySetInnerHTML={{ __html: t("contact_popup_message") }} />
             )}
         </div>
     );

@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/index.css';
+import "../i18n.js";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { t, i18n } = useTranslation();
 
   const sections = [
-    { id: 'home', label: 'Accueil' },
-    { id: 'about', label: 'À propos' },
-    { id: 'skills', label: 'Compétences' },
-    { id: 'projet', label: 'Projets' },
-    // { id: 'experience', label: 'Expériences' },
-    { id: 'contacts', label: 'Contacts' },
+    { id: 'home', label: t('menu_home') },
+    { id: 'about', label: t('menu_about') },
+    { id: 'skills', label: t('menu_skills') },
+    { id: 'projet', label: t('menu_projects') },
+    { id: 'contacts', label: t('menu_contacts') },
   ];
 
   useEffect(() => {
@@ -31,9 +33,7 @@ function Header() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { threshold: 0.5 }
@@ -59,11 +59,15 @@ function Header() {
     }
   };
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'fr' ? 'en' : 'fr';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <header>
       <a className="logo" onClick={(e) => scrollToSection(e, 'home')}>
-        MonPortfolio.
+        Annabelle.
       </a>
 
       <nav id="nav-menu" className={menuOpen ? 'open' : ''}>
@@ -76,8 +80,11 @@ function Header() {
             {label}
           </a>
         ))}
+
         <div className="trad-content">
-          <a>En</a>
+          <button onClick={toggleLanguage}>
+            {i18n.language === 'fr' ? 'FR' : 'EN'}
+          </button>
         </div>
       </nav>
 

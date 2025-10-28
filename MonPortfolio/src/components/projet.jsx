@@ -4,7 +4,7 @@ import "../css/projet.css";
 const ProjetContent = () => {
 
     return (
-        <div class='projet-content'>
+        <div className='projet-content'>
             <h1>Mes Projets</h1>
 
         </div>

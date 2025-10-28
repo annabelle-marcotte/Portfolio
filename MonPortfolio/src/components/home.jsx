@@ -1,16 +1,14 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "../css/home.css";
 
 const HomeContent = () => {
+    const { t } = useTranslation();
     const typingRef = useRef(null);
-    const timeoutRef = useRef(null); // Keep track of the current timeout
+    const timeoutRef = useRef(null);
 
     useEffect(() => {
-        const words = [
-            "développeuse Full Stack.",
-            "étudiante en informatique.",
-            "passionnée de code.",
-        ];
+        const words = t("home_typing_words", { returnObjects: true });
         let index = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -40,25 +38,19 @@ const HomeContent = () => {
 
         type();
 
-        // Cleanup when the component unmounts
         return () => clearTimeout(timeoutRef.current);
-    }, []);
+    }, [t]);
 
     return (
         <div className="home-container">
             <div className="home-content">
-                <h1>
-                    Bonjour, je suis <span>Annabelle</span>!
-                </h1>
+                <h1 dangerouslySetInnerHTML={{ __html: t("home_greeting") }} />
                 <h3>
-                    Je suis une{" "}
+                    {t("home_paragraph")}{" "}
                     <span className="typing-text">
                         <span ref={typingRef}></span>
                     </span>
                 </h3>
-                <p>
-                    idk yet
-                </p>
 
                 <div className="links">
                     <a
@@ -79,7 +71,7 @@ const HomeContent = () => {
 
                 <button>
                     <a href="/links/cv.pdf" target="_blank" rel="noopener noreferrer">
-                        Regarder mon CV!
+                        {t("home_cv_button")}
                     </a>
                 </button>
             </div>

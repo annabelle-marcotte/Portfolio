@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/about.css';
 import ImageLoop from '../assets/imageLoop.jsx';
 
 function AboutContent() {
+    const { t } = useTranslation();
+
     const Img = [
         { src: '/about-pictures/gaspe.JPEG', alt: 'Gaspé' },
         { src: '/about-pictures/germany-falls.JPEG', alt: 'Waterfall Germany' },
@@ -22,23 +25,23 @@ function AboutContent() {
     ];
 
     useEffect(() => {
-        const elements = document.querySelectorAll('.description-about h1, .description-about h3, .description-about p, .about-line');
+        const elements = document.querySelectorAll(
+            '.description-about h1, .description-about h3, .description-about p, .about-line'
+        );
 
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
                 });
             },
             { threshold: 0.3 }
         );
 
-        elements.forEach(el => observer.observe(el));
+        elements.forEach((el) => observer.observe(el));
 
         return () => {
-            elements.forEach(el => observer.unobserve(el));
+            elements.forEach((el) => observer.unobserve(el));
         };
     }, []);
 
@@ -53,20 +56,14 @@ function AboutContent() {
                     fadeOutColor="#7ea38f"
                 />
             </div>
-            <div className='description-about'>
-                <h1>À propos</h1>
-                <h3>Developpeuse full stack</h3>
-                <p>
-                    Je suis une étudiante en technique de l’informatique, développeuse Full Stack curieuse et passionnée par le web et les technologies.
-                    Ce qui me motive, c’est d’apprendre constamment et de créer des projets à la fois utiles et esthétiques.
-                    J’aime particulièrement tout ce qui touche au développement web et aux bases de données,
-                    où je peux combiner logique et créativité. <br /><br />
-                    En dehors du développement, j’adore le ski alpin, voyager et découvrir de nouvelles cultures,
-                    tout ce qui me permet d’apprendre et de voir le monde autrement.
-                </p>
 
+            <div className="description-about">
+                <h1>{t('about_title')}</h1>
+                <h3>{t('about_subtitle')}</h3>
+                <p>{t('about_paragraph')}</p>
             </div>
-            <div className='about-line'></div>
+
+            <div className="about-line"></div>
         </div>
     );
 }
