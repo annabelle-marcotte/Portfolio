@@ -5,6 +5,7 @@ footer {
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -48,6 +49,7 @@ footer {
     cursor: pointer;
     border-radius: 50px;
 }
+
 .contact-info h2 {
     color: white;
     font-size: 1.3rem;
@@ -58,8 +60,10 @@ footer {
 .contact-info .contact-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    /* Align left */
+    text-align: left;
     gap: 12px;
-    margin: 15px 0;
 }
 
 .contact-info .contact-item img {
@@ -76,11 +80,12 @@ footer {
     display: block;
 }
 
-.contact-info .contact-item span  {
+.contact-info .contact-item span {
     color: white;
     font-size: 0.95rem;
 }
-.contact-info .contact-item a  {
+
+.contact-info .contact-item a {
     color: white;
     font-size: 0.95rem;
 }
@@ -109,6 +114,7 @@ footer {
     color: white;
     transition: all 0.3s ease;
 }
+
 .footer-line {
     width: 100%;
     height: 1px;
@@ -153,7 +159,6 @@ footer {
     }
 }
 
-/* ✅ MOBILE OPTIMIZATION */
 @media (max-width: 600px) {
     footer {
         padding: 40px 20px 25px 20px;
@@ -168,10 +173,17 @@ footer {
         font-size: 0.9rem;
     }
 
+    .footer-column .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
     .footer-column .social-links a img {
         width: 32px;
         height: 32px;
-        margin-right: 6px;
     }
 
     .contact-info .contact-item img {
@@ -181,22 +193,24 @@ footer {
     }
 
     .contact-info .contact-item {
-        flex-direction: row;
-        justify-content: center;
-        gap: 8px;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
     }
+}
 
-    .quick-links a {
-        font-size: 0.9rem;
-        margin: 6px 0;
-        padding: 4px 8px;
-    }
+.quick-links a {
+    font-size: 0.9rem;
+    margin: 6px 0;
+    padding: 4px 8px;
+}
 
-    .footer-line {
-        margin: 25px auto 15px;
-    }
+.footer-line {
+    margin: 25px auto 15px;
+}
 
-    .footer-bottom {
-        font-size: 0.8rem;
-    }
+.footer-bottom {
+    font-size: 0.8rem;
 }
