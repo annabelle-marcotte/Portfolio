@@ -1,6 +1,3 @@
-/* =========================================
-   FOOTER — OVERALL STYLE
-========================================= */
 footer {
     background: linear-gradient(135deg, #7ea38f), #5a806c;
     color: #e5e5e5;
@@ -18,9 +15,6 @@ footer {
     margin: 0 auto;
 }
 
-/* =========================================
-   LEFT COLUMN — INFO & SOCIALS
-========================================= */
 .footer-column h2 {
     font-size: 1.6rem;
     font-weight: 700;

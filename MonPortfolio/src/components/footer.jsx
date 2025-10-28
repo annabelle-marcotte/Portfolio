@@ -30,7 +30,7 @@ const FooterContent = () => {
                 </div>
 
                 <div className="footer-column contact-info">
-                    <h2>Get In Touch</h2>
+                    <h2>Entrer En Contact</h2>
                     <div className="contact-item">
                         <img src="/contact/mail.png" alt="email" />
                         <div><strong>Email:</strong> <span> <a href="mailto:aj.marcotte@icloud.com">aj.marcotte@icloud.com</a></span></div>
@@ -46,7 +46,7 @@ const FooterContent = () => {
                 </div>
 
                 <div className="footer-column quick-links">
-                    <h1>Quick Links</h1>
+                    <h1>Liens Rapides</h1>
                     <a onClick={(e) => scrollToSection(e, "home")}>Accueil</a>
                     <a onClick={(e) => scrollToSection(e, "about")}>À propos</a>
                     <a onClick={(e) => scrollToSection(e, "skills")}>Compétences</a>
