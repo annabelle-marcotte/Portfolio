@@ -76,6 +76,9 @@ function Header() {
             {label}
           </a>
         ))}
+        <div className="trad-content">
+          <a>En</a>
+        </div>
       </nav>
 
       <button

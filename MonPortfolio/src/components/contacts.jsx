@@ -1,15 +1,19 @@
 import "../css/contacts.css";
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactsContent = () => {
     const [state, handleSubmit] = useForm("xjkpgwgd");
+    const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
         if (state.succeeded) {
-            alert("Message envoyé avec succès !");
+            setShowPopup(true); 
             const form = document.querySelector("form");
             if (form) form.reset();
+
+            const timer = setTimeout(() => setShowPopup(false), 3000);
+            return () => clearTimeout(timer);
         }
     }, [state.succeeded]);
 
@@ -94,6 +98,12 @@ const ContactsContent = () => {
                     </form>
                 </div>
             </div>
+
+            {showPopup && (
+                <div className="popup-message">
+                    <p>Merci pour votre message !<br />Je vous répondrai dès que possible.</p>
+                </div>
+            )}
         </div>
     );
 };

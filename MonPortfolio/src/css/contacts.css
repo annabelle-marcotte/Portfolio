@@ -176,6 +176,55 @@
     margin-bottom: 10px;
     font-weight: 500;
 }
+.popup-message {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #7ea38f;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 200;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: popupFadeIn 0.5s forwards, popupFadeOut 0.5s forwards 2.5s;
+    text-align: center;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popupFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .popup-message {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        font-size: 0.9rem;
+        padding: 15px 20px;
+    }
+}
 
 @media (max-width: 1200px) {
     .contacts-content {

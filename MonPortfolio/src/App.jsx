@@ -4,7 +4,8 @@ import HomeContent from './components/home';
 import AboutContent from './components/about';
 import SkillsContent from './components/skills';
 import ProjetContent from './components/projet';
-import ExperienceContent from './components/experience';
+// import ExperienceContent from './components/experience';
+import FooterContent from './components/footer';
 import ContactsContent from './components/contacts';
 
 import ClickSpark from './assets/clicAnimation';
@@ -56,6 +57,7 @@ function App() {
       <section id="contacts">
         <ContactsContent />
       </section> 
+        <FooterContent />
     </ClickSpark>
   );
 }
