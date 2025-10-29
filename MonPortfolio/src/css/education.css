@@ -1,0 +1,46 @@
+.education-content {
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    cursor: default;
+    font-family: "Poppins", sans-serif;
+}
+
+.education-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    color: #7ea38f;
+    font-family: "Poppins", sans-serif;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 1.5s ease-out forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.education-grid {
+    width: 35%;
+    padding: 50px;
+    color: white;
+    border-radius: 25px;
+    margin: 40px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #7ea38f, #9ccbb1);
+    transition: all 0.4s ease-in-out;
+}
+
+.education-grid:hover {
+    background: linear-gradient(135deg, #9ccbb1, #7ea38f);
+   
+    box-shadow: 0 0 25px #7ea38f;
+    transform: translateY(-8px) scale(1.05);
+    font-size: 1rem;
+    cursor: pointer;
+}
