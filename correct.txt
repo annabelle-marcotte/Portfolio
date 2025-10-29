@@ -1,5 +1,3 @@
-add a loading screen for when you send a message 
-fix sending a message 
-add few sentences in home screen
-
-finally start section projet 
+fix sending message,
+add sentences 
+make the languages out of the hamburger 

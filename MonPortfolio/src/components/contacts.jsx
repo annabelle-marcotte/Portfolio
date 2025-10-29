@@ -7,6 +7,7 @@ const ContactsContent = () => {
     const { t } = useTranslation();
     const [state, handleSubmit] = useForm("xjkpgwgd");
     const [showPopup, setShowPopup] = useState(false);
+    const [sending, setSending] = useState(false); // animation state
 
     useEffect(() => {
         if (state.succeeded) {
@@ -21,7 +22,12 @@ const ContactsContent = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        setSending(true);
         await handleSubmit(event);
+        setTimeout(() => setSending(false), 1000);
+        setTimeout(() => {
+            state.succeeded = false;
+        }, 1500);
     };
 
     return (
@@ -95,7 +101,14 @@ const ContactsContent = () => {
                         <textarea id="message" name="message" placeholder={t("contact_message_placeholder")} required />
                         <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-                        <button type="submit" disabled={state.submitting}>{t("contact_submit_button")}</button>
+                        <button type="submit" disabled={state.submitting}>
+                            {t("contact_submit_button")}
+                            <img
+                                src="../contact/sent.png"
+                                className={sending ? "send-animate" : ""}
+                                alt="send"
+                            />
+                        </button>
                     </form>
                 </div>
             </div>
