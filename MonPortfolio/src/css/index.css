@@ -83,7 +83,7 @@ main {
 
 .trad-content button {
     background-color: transparent;
-    border: 2px solid #86b499;
+    border: 4px solid #a1cfb6;
     color: black;
     padding: 4px 8px;
     border-radius: 6px;
@@ -92,7 +92,8 @@ main {
 }
 
 .trad-content button:hover {
-    background-color: #86b499;
+    background-color: #a1cfb6;
+    border: 4px solid #86b499;
     color: #fff;
 }
 

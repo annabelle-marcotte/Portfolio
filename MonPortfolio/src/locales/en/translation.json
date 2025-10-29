@@ -6,7 +6,7 @@
     "menu_contacts": "Contact",
     "about_title": "About",
     "about_subtitle": "Full Stack Developer",
-    "about_paragraph": "I am a computer science student and a curious Full Stack developer passionate about web and technology. What drives me is the desire to constantly learn and build projects that are both useful and visually appealing. I particularly enjoy everything related to web development and databases, where I can combine logic and creativity.\n\nOutside of development, I love alpine skiing, traveling, and discovering new cultures — anything that helps me learn and see the world from new perspectives.",
+    "about_paragraph": "I am a computer science student and a curious Full Stack developer passionate about web and technology. What drives me is the desire to constantly learn and build projects that are both useful and visually appealing. I particularly enjoy everything related to web development and databases, where I can combine logic and creativity.\n \n Outside of development, I love alpine skiing, traveling, and discovering new cultures, anything that helps me learn and see the world from new perspectives.",
     "home_greeting": "Hello, I'm <span>Annabelle</span>!",
     "home_typing_words": [
         "Full Stack developer.",
@@ -49,5 +49,6 @@
     "skills_frontend": "Front-end",
     "skills_backend": "Back-end",
     "skills_db": "Databases",
-    "skills_tools": "Tools"
+    "skills_tools": "Tools",
+    "menu_education" : "Education"
 }

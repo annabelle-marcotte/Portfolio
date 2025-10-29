@@ -1,6 +1,5 @@
-put everything adaptative, 
-fix issuethe issue is you can scroll and itll go to the side i think its because of the lanyard but check
+add a loading screen for when you send a message 
+fix sending a message 
+add few sentences in home screen
 
-
-faire en sorte que when you press on about it shows the images too and not competence
-
+finally start section projet 

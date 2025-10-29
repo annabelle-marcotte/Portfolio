@@ -3,7 +3,8 @@ import Lanyard from './components/Lanyard/Lanyard';
 import HomeContent from './components/home';
 import AboutContent from './components/about';
 import SkillsContent from './components/skills';
-import ProjetContent from './components/projet';
+import EducationContent from './components/education';
+// import ProjetContent from './components/projet';
 // import ExperienceContent from './components/experience';
 import FooterContent from './components/footer';
 import ContactsContent from './components/contacts';
@@ -47,13 +48,15 @@ function App() {
       <section id="skills">
         <SkillsContent />
       </section>
-      <section id="projet">
+      {/* <section id="projet">
         <ProjetContent />
-      </section>
+      </section> */}
       {/* <section id="experience">
         <ExperienceContent />
       </section> */}
-
+      <section id="education">
+        <EducationContent />
+      </section> 
       <section id="contacts">
         <ContactsContent />
       </section> 

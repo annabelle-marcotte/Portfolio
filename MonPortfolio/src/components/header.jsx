@@ -12,7 +12,8 @@ function Header() {
     { id: 'home', label: t('menu_home') },
     { id: 'about', label: t('menu_about') },
     { id: 'skills', label: t('menu_skills') },
-    { id: 'projet', label: t('menu_projects') },
+    // { id: 'projet', label: t('menu_projects') },
+    { id: 'education', label: t('menu_education') },
     { id: 'contacts', label: t('menu_contacts') },
   ];
 

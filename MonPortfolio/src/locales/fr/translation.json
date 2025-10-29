@@ -34,8 +34,8 @@
     "footer_name": "Annabelle Marcotte",
     "footer_description": "Developpeuse Full Stack au Québec, Canada",
     "footer_contact_title": "Entrer En Contact",
-    "footer_email": "Email",
-    "footer_phone": "Phone",
+    "footer_email": "Courriel",
+    "footer_phone": "Téléphone",
     "footer_location": "Location",
     "footer_quick_links": "Liens Rapides",
     "footer_home": "Accueil",
@@ -49,5 +49,6 @@
     "skills_frontend": "Front-end",
     "skills_backend": "Back-end",
     "skills_db": "Base de données",
-    "skills_tools": "Outils"
+    "skills_tools": "Outils",
+    "menu_education" : "Éducation"
 }
