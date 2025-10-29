@@ -41,7 +41,7 @@
     "footer_home": "Accueil",
     "footer_about": "À propos",
     "footer_skills": "Compétences",
-    "footer_projects": "Projets",
+    "footer_education": "Éducation",
     "footer_contacts": "Contacts",
     "footer_copyright": "© 2025 Annabelle Marcotte. Tous droits réservés.",
     "footer_made_with": "Fait avec React & CSS",
@@ -50,5 +50,8 @@
     "skills_backend": "Back-end",
     "skills_db": "Base de données",
     "skills_tools": "Outils",
-    "menu_education" : "Éducation"
+    "menu_education": "Éducation",
+    "education_title": "Mon Éducation",
+    "education_program": "Techniques de l'informatique",
+    "education_description": "Diplôme d’études collégiales (DEC) en informatique<br />Collège Lionel-Groulx, en cours"
 }

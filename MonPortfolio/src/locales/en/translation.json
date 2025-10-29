@@ -41,7 +41,7 @@
     "footer_home": "Home",
     "footer_about": "About",
     "footer_skills": "Skills",
-    "footer_projects": "Projects",
+    "footer_education": "Education",
     "footer_contacts": "Contacts",
     "footer_copyright": "© 2025 Annabelle Marcotte. All rights reserved.",
     "footer_made_with": "Made with React & CSS",
@@ -50,5 +50,8 @@
     "skills_backend": "Back-end",
     "skills_db": "Databases",
     "skills_tools": "Tools",
-    "menu_education" : "Education"
+    "menu_education": "Education",
+    "education_title": "My Education",
+    "education_program": "Computer Science Techniques",
+    "education_description": "College Diploma (DEC) in Computer Science<br />Lionel-Groulx College, in progress"
 }

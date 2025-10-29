@@ -7,6 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+
 .education-content h1 {
     font-size: 3rem;
     font-weight: 900;
@@ -38,9 +39,8 @@
 
 .education-grid:hover {
     background: linear-gradient(135deg, #9ccbb1, #7ea38f);
-   
     box-shadow: 0 0 25px #7ea38f;
-    transform: translateY(-8px) scale(1.05);
+    transform: translateY(-8px) scale(1.02);
     font-size: 1rem;
     cursor: pointer;
 }

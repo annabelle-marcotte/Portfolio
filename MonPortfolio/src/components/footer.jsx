@@ -53,7 +53,7 @@ const FooterContent = () => {
                     <a onClick={(e) => scrollToSection(e, "home")}>{t("footer_home")}</a>
                     <a onClick={(e) => scrollToSection(e, "about")}>{t("footer_about")}</a>
                     <a onClick={(e) => scrollToSection(e, "skills")}>{t("footer_skills")}</a>
-                    <a onClick={(e) => scrollToSection(e, "projet")}>{t("footer_projects")}</a>
+                    <a onClick={(e) => scrollToSection(e, "education")}>{t("footer_education")}</a>
                     <a onClick={(e) => scrollToSection(e, "contacts")}>{t("footer_contacts")}</a>
                 </div>
             </div>
