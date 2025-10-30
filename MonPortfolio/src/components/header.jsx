@@ -82,13 +82,18 @@ function Header() {
           </a>
         ))}
 
-        <div className="trad-content">
+        <div className="trad-content desktop-lang">
           <button onClick={toggleLanguage}>
             {i18n.language === 'fr' ? 'FR' : 'EN'}
           </button>
         </div>
-      </nav>
 
+      </nav>
+              <div className="trad-content mobile-lang">
+        <button onClick={toggleLanguage}>
+          {i18n.language === 'fr' ? 'FR' : 'EN'}
+        </button>
+      </div>
       <button
         className="hamburger"
         aria-label="Toggle menu"

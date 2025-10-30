@@ -7,11 +7,12 @@ const ContactsContent = () => {
     const { t } = useTranslation();
     const [state, handleSubmit] = useForm("xjkpgwgd");
     const [showPopup, setShowPopup] = useState(false);
-    const [sending, setSending] = useState(false); // animation state
+    const [sending, setSending] = useState(false);
 
     useEffect(() => {
         if (state.succeeded) {
             setShowPopup(true);
+
             const form = document.querySelector("form");
             if (form) form.reset();
 

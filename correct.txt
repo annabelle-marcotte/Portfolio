@@ -1,4 +1,2 @@
 fix sending message,
-add sentences 
-make the languages out of the hamburger 
 when i send a message it zooms in my page

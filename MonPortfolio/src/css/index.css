@@ -76,7 +76,7 @@ main {
     padding: 0.5rem;
 }
 
-.trad-content{
+.trad-content {
     font-size: 17px;
 
 }
@@ -97,9 +97,42 @@ main {
     color: #fff;
 }
 
+.mobile-lang {
+    display: none;
+}
+
 @media (max-width: 995px) {
     .hamburger {
         display: block;
+    }
+
+    .desktop-lang {
+        display: none;
+    }
+
+    .mobile-lang {
+        display: block;
+        margin-right: -65%;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .mobile-lang button {
+        background-color: transparent;
+        border: 3px solid #a1cfb6;
+        color: black;
+        padding: 4px 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mobile-lang button:hover {
+        background-color: #a1cfb6;
+        border: 3px solid #86b499;
+        color: #fff;
     }
 
     nav {
@@ -127,7 +160,6 @@ main {
 
     nav a {
         font-size: clamp(1.2rem, 3vw, 1.6rem);
-        /* Adaptive font size */
     }
 }
 
@@ -144,6 +176,14 @@ main {
         width: 100%;
         border-bottom-left-radius: 0;
         border-right: 3px solid white;
+    }
+    
+    .mobile-lang {
+        display: block;
+        margin-right: -50%;
+    }
+        .desktop-lang {
+        display: none !important;
     }
 }
 
