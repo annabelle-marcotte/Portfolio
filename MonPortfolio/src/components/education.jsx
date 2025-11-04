@@ -1,11 +1,33 @@
 import { Trans, useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import "../css/education.css";
 
 const EducationContent = () => {
     const { t } = useTranslation();
+useEffect(() => {
+        const elements = document.querySelectorAll(
+            '.education-line'
+        );
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+
+        return () => {
+            elements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
 
     return (
-        <div> <div className="about-line"></div>
+        <div>
+            <div className="education-line"></div>
             <div className='education-content'>
                 <h1>{t("education_title")}</h1>
                 <div className="education-grid">
@@ -15,7 +37,7 @@ const EducationContent = () => {
                     </p>
                 </div>
             </div>
-            
+
         </div>
     );
 };

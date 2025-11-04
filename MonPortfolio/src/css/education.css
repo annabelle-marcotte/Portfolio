@@ -36,6 +36,20 @@
     background: linear-gradient(135deg, #7ea38f, #9ccbb1);
     transition: all 0.4s ease-in-out;
 }
+.education-line {
+    width: 0;
+    height: 5px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #86b499, #c0e0c6);
+    opacity: 0;
+    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.education-line.visible {
+    width: 250px;
+    opacity: 1;
+}
 
 .education-grid:hover {
     background: linear-gradient(135deg, #9ccbb1, #7ea38f);

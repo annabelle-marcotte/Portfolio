@@ -43,7 +43,7 @@ function App() {
       </section>
 
       <section id="about">
-        <MetaBalls
+        {/* <MetaBalls
           color="#acd0bd"
           cursorBallColor="#7ea38f"
           cursorBallSize={0}
@@ -55,7 +55,7 @@ function App() {
           clumpFactor={1.2}
           speed={0.15}
           className="meta-balls"
-        />
+        /> */}
         <AboutContent />
       </section>
       <section id="skills">
