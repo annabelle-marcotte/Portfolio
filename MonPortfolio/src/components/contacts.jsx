@@ -33,6 +33,7 @@ const ContactsContent = () => {
 
     return (
         <div>
+            <div className="contact-divider"></div>
             <div className="contacts-header">
                 <h1>{t("contact_title")}</h1>
             </div>
