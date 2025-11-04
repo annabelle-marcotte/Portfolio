@@ -8,8 +8,27 @@
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     cursor: default;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
+
+section {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.meta-balls,
+.meta-balls-skills,
+.meta-balls-contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: -90%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 
 .contacts-header h1 {
     font-size: 3rem;
@@ -49,15 +68,18 @@
     gap: 15px;
     margin-bottom: 25px;
 }
+
 .contact-item a {
     text-decoration: none;
-    color:#0f172a;
+    color: #0f172a;
     transition: color 0.3 ease;
 }
+
 .contact-item a:hover {
-    color:#a1cfb6;
-    text-decoration:underline;
+    color: #a1cfb6;
+    text-decoration: underline;
 }
+
 .contact-item img {
     width: 40px;
     height: 40px;
@@ -149,6 +171,7 @@
     height: 120px;
     resize: none;
 }
+
 .user-content button {
     display: inline-flex;
     align-items: center;
@@ -185,9 +208,19 @@
 }
 
 @keyframes send-icon {
-    0% { transform: translateX(0) rotate(0deg); opacity: 1; }
-    50% { transform: translateX(20px) rotate(20deg); }
-    100% { transform: translateX(40px) rotate(45deg); opacity: 0; }
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(20px) rotate(20deg);
+    }
+
+    100% {
+        transform: translateX(40px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
 
@@ -198,6 +231,7 @@
     margin-bottom: 10px;
     font-weight: 500;
 }
+
 .popup-message {
     position: fixed;
     bottom: 40px;
@@ -221,6 +255,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -232,6 +267,7 @@
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(20px);
@@ -241,7 +277,7 @@
 @media (max-width: 600px) {
     .popup-message {
         bottom: auto;
-        right: auto; 
+        right: auto;
         left: 17%;
         top: 20%;
         transform: translate(-50%, -50%);
@@ -262,7 +298,8 @@
         font-size: 2.5rem;
     }
 
-    .info-me, .user-content {
+    .info-me,
+    .user-content {
         width: 80%;
     }
 }

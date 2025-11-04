@@ -43,9 +43,23 @@ function App() {
       </section>
 
       <section id="about">
+        <MetaBalls
+          color="#acd0bd"
+          cursorBallColor="#7ea38f"
+          cursorBallSize={0}
+          ballCount={21}
+          animationSize={15}
+          enableMouseInteraction={true}
+          enableTransparency={true}
+          hoverSmoothness={0.2}
+          clumpFactor={1.2}
+          speed={0.15}
+          className="meta-balls"
+        />
         <AboutContent />
       </section>
       <section id="skills">
+
         <SkillsContent />
       </section>
       {/* <section id="projet">
@@ -55,12 +69,38 @@ function App() {
         <ExperienceContent />
       </section> */}
       <section id="education">
+        {/* <MetaBalls
+          color="#acd0bd"
+          cursorBallColor="#7ea38f"
+          cursorBallSize={0}
+          ballCount={21}
+          animationSize={15}
+          enableMouseInteraction={true}
+          enableTransparency={true}
+          hoverSmoothness={0.2}
+          clumpFactor={1.2}
+          speed={0.15}
+          className="meta-balls-skills"
+        /> */}
         <EducationContent />
-      </section> 
+      </section>
       <section id="contacts">
+        <MetaBalls
+          color="#acd0bd"
+          cursorBallColor="#7ea38f"
+          cursorBallSize={0}
+          ballCount={21}
+          animationSize={15}
+          enableMouseInteraction={true}
+          enableTransparency={true}
+          hoverSmoothness={0.2}
+          clumpFactor={1.2}
+          speed={0.15}
+          className="meta-balls-contacts"
+        />
         <ContactsContent />
-      </section> 
-        <FooterContent />
+      </section>
+      <FooterContent />
     </ClickSpark>
   );
 }
