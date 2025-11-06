@@ -44,7 +44,6 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
-
     transform: translateY(30px);
     opacity: 0;
     height: auto;
@@ -65,6 +64,11 @@
     padding: 20px;
 }
 
+.section-skills > div:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px #7ea38f;
+    transition: 0.4s ease;
+}
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
