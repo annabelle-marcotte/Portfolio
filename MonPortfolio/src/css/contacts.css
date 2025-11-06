@@ -10,22 +10,24 @@
     cursor: default;
     flex-wrap: wrap;
 }
+
 .contact-divider {
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(90deg, #86b499, #c0e0c6, #86b499);
-  background-size: 200% 100%;
-  animation: gradientFlow 2s linear infinite;
-  border-radius: 10px;
-  z-index: 99;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, #86b499, #c0e0c6, #86b499);
+    background-size: 200% 100%;
+    animation: gradientFlow 2s linear infinite;
+    z-index: 99;
 }
+
 @keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
 }
 
 section {
@@ -45,7 +47,6 @@ section {
     z-index: -1;
     pointer-events: none;
 }
-
 
 .contacts-header h1 {
     font-size: 3rem;

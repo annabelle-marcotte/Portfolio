@@ -1,5 +1,5 @@
 import "../css/contacts.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { useTranslation } from "react-i18next";
 
@@ -8,13 +8,16 @@ const ContactsContent = () => {
     const [state, handleSubmit] = useForm("xjkpgwgd");
     const [showPopup, setShowPopup] = useState(false);
     const [sending, setSending] = useState(false);
+    const formRef = useRef(null); // 👈 get form reference
 
     useEffect(() => {
         if (state.succeeded) {
             setShowPopup(true);
 
-            const form = document.querySelector("form");
-            if (form) form.reset();
+            // 👇 manually reset form every time
+            if (formRef.current) {
+                formRef.current.reset();
+            }
 
             const timer = setTimeout(() => setShowPopup(false), 3000);
             return () => clearTimeout(timer);
@@ -24,11 +27,11 @@ const ContactsContent = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         setSending(true);
+
         await handleSubmit(event);
+
+        // Stop "sending" animation
         setTimeout(() => setSending(false), 1000);
-        setTimeout(() => {
-            state.succeeded = false;
-        }, 1500);
     };
 
     return (
@@ -91,7 +94,7 @@ const ContactsContent = () => {
 
                 <div className="user-content">
                     <h3>{t("contact_form_title")}</h3>
-                    <form onSubmit={onSubmit}>
+                    <form ref={formRef} onSubmit={onSubmit}>
                         <label htmlFor="name">{t("contact_name_label")}</label>
                         <input id="name" type="text" name="name" placeholder={t("contact_name_placeholder")} required />
 

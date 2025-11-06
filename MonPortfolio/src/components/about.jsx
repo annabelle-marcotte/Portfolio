@@ -62,8 +62,7 @@ function AboutContent() {
                 <h3>{t('about_subtitle')}</h3>
                 <p>{t('about_paragraph')}</p>
             </div>
-
-            <div className="about-line"></div>
+            <div className="contact-divider"></div>
         </div>
     );
 }
