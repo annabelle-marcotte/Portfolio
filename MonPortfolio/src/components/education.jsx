@@ -27,7 +27,7 @@ useEffect(() => {
 
     return (
         <div>
-            <div className="education-line"></div>
+            
             <div className='education-content'>
                 <h1>{t("education_title")}</h1>
                 <div className="education-grid">

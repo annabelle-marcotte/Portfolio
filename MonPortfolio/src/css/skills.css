@@ -5,12 +5,13 @@
     margin: 0 auto;
     cursor: default;
     font-family: "Poppins", sans-serif;
+    background-color: #7ea38f;
 }
 
 .skills-content h1 {
     font-size: clamp(1.8rem, 4vw, 3rem); 
     font-weight: 900;
-    color: #86b499;
+    color: white;
     text-align: center;
     opacity: 0;
     transform: translateY(-50px);
@@ -33,8 +34,8 @@
 
 .section-skills > div {
     position: relative;
-    background-color: #7ea38f;
-    color: white;
+    background-color: white;
+    color:#7ea38f;
     border-radius: 12px;
     text-align: center;
     width: auto;
@@ -55,7 +56,7 @@
     margin: 0 0 15px 0;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 800;
-    color: white;
+    color: #7ea38f;
 }
 
 .section-skills > div.visible {
@@ -66,7 +67,7 @@
 
 .section-skills > div:hover{
     transform: scale(1.01);
-    box-shadow: 0 0 10px #7ea38f;
+    box-shadow: 0 0 10px #fff;
     transition: 0.4s ease;
 }
 .skills-grid {
@@ -79,7 +80,7 @@
 }
 
 .skill-box {
-    background-color: white;
+    background-color: #7ea38f;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -91,6 +92,8 @@
 
 .skill-box:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px #7ea38f;
+
 }
 
 .skill-box img {
