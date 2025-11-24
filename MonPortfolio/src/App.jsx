@@ -38,7 +38,7 @@ function App() {
         />
         <HomeContent />
         <div className="interactive-wrapper">
-          <Lanyard />
+          {/* <Lanyard /> */}
         </div>
       </section>
 

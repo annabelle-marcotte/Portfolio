@@ -8,13 +8,12 @@ const ContactsContent = () => {
     const [state, handleSubmit] = useForm("xjkpgwgd");
     const [showPopup, setShowPopup] = useState(false);
     const [sending, setSending] = useState(false);
-    const formRef = useRef(null); // 👈 get form reference
+    const formRef = useRef(null);
 
     useEffect(() => {
         if (state.succeeded) {
             setShowPopup(true);
 
-            // 👇 manually reset form every time
             if (formRef.current) {
                 formRef.current.reset();
             }
@@ -30,8 +29,7 @@ const ContactsContent = () => {
 
         await handleSubmit(event);
 
-        // Stop "sending" animation
-        setTimeout(() => setSending(false), 1000);
+        setTimeout(() => setSending(false));
     };
 
     return (

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function ImageLoop({
   images = [],
-  speed = 0.3,
+  speed = 0.2,
   imageHeight = 260,
   gap = 40,
   fadeOutColor = "#7ea38f",

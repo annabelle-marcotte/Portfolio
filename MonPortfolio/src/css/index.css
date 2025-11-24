@@ -11,7 +11,6 @@
 
 ::-webkit-scrollbar-track {
     background: transparent;
-    /* or rgba(0,0,0,0.1) */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,7 +26,11 @@
 
 
 header {
-    background-color: #86b499;
+    background: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+
     position: fixed;
     top: 0;
     left: 0;
@@ -37,14 +40,14 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+    /* filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12)); */
 
     font-family: "Poppins", sans-serif;
 }
 
 header>a {
     text-decoration: none;
-    color: black;
+    color: #86b499;
     font-size: clamp(1.5rem, 4vw, 1.875rem);
     font-weight: 700;
 }
@@ -58,7 +61,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #86b499;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -66,22 +69,26 @@ nav a {
 
 header a {
     text-decoration: none;
-    color: black;
+    color: #86b499;
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
     border-bottom: 3px solid transparent;
+    transition: transform 0.2s ease;
+    text-shadow: #a1cfb6 0px 0px 5px;
 }
 
-header a:hover {
-    color: white;
-    border-bottom-color: white;
-    cursor: pointer;
+.logo {
+    color: #86b499;
+    font-weight: 900;
+    text-shadow: none;
 }
 
 nav a:hover,
 nav a.active {
-    color: white;
-    border-bottom-color: white;
+    color: #6d907d;
+    border-bottom-color: #6d907d;
     cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: #6d907d 0px 0px 2px;
 }
 
 main {
@@ -105,18 +112,18 @@ main {
 
 .trad-content button {
     background-color: transparent;
-    border: 4px solid #a1cfb6;
-    color: black;
+    color: #86b499;
     padding: 4px 8px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease 0.2;
 }
 
 .trad-content button:hover {
     background-color: #a1cfb6;
-    border: 4px solid #86b499;
+    transform: scale(1.05);
     color: #fff;
+    box-shadow: #a1cfb6 0px 0px 10px;
 }
 
 .mobile-lang {
