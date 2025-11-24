@@ -103,6 +103,7 @@ main {
     color: black;
     cursor: pointer;
     padding: 0.5rem;
+    margin-top: -4px;
 }
 
 .trad-content {
@@ -112,9 +113,6 @@ main {
 
 .trad-content button {
     background-color: transparent;
-    color: #86b499;
-    padding: 4px 8px;
-    border-radius: 6px;
     cursor: pointer;
     transition: transform 0.3s ease 0.2;
 }
@@ -209,7 +207,7 @@ main {
 
     .mobile-lang {
         display: block;
-        margin-right: -50%;
+        margin-right: -45%;
     }
 
     .desktop-lang {
@@ -224,5 +222,33 @@ main {
 
     .hamburger {
         font-size: 1.25rem;
+    }
+
+    header a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        border-bottom: 3px solid transparent;
+        transition: transform 0.2s ease;
+        text-shadow: white 0px 0px 5px;
+
+        backdrop-filter: blur(4px) !important; 
+        -webkit-backdrop-filter: blur(4px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .logo {
+        color: #86b499;
+        font-weight: 900;
+        text-shadow: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: #6d907d;
+        border-bottom-color: #6d907d;
+        cursor: pointer;
+        transform: scale(1.05);
+        text-shadow: #6d907d 0px 0px 2px;
     }
 }
