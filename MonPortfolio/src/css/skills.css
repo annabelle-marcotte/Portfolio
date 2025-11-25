@@ -1,21 +1,20 @@
+
 .skills-content {
-    padding: 40px;
+    padding: 60px 20px;
     width: 100%;
     text-align: center;
-    margin: 0 auto;
     cursor: default;
     font-family: "Poppins", sans-serif;
     background-color: #7ea38f;
 }
 
 .skills-content h1 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 900;
     color: white;
-    text-align: center;
     opacity: 0;
-    transform: translateY(-50px);
-    transition: all 1.5s ease-out;
+    transform: translateY(-40px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .skills-content h1.visible {
@@ -24,110 +23,99 @@
 }
 
 .section-skills {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 50px 0 150px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1600px;
+    margin: 60px auto 120px;
+    padding: 0 20px;
 }
 
-.section-skills>div {
-    position: relative;
+@media (max-width: 1150px) {
+    .section-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .section-skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-skills > div {
     background-color: white;
     color: #7ea38f;
-    border-radius: 12px;
+    border-radius: 16px;
     text-align: center;
-    width: auto;
-    flex: 1 300px;
+
+    min-height: 380px;
+    padding: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     overflow: hidden;
-    transform: translateY(30px);
+
     opacity: 0;
-    height: auto;
-    padding: 0;
-    transition: height 1s ease-out, opacity 1s ease-out, padding 1s ease-out;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out,
+        padding 0.8s ease-out;
 }
 
-.section-skills>div h2 {
+.section-skills > div.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-skills > div:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-skills > div h2 {
     margin: 0 0 15px 0;
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     font-weight: 800;
     color: #7ea38f;
 }
 
-.section-skills>div.visible {
-    min-height: 400px;
-    opacity: 1;
-    padding: 20px;
-}
-
-.section-skills>div:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 10px #fff;
-    transition: 0.4s ease;
-}
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 20px;
+    width: 100%;
     justify-items: center;
     margin-top: 20px;
-    margin-bottom: 10px;
 }
 
+/* Individual skill icon */
 .skill-box {
     background-color: #7ea38f;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: clamp(10px, 2vw, 16px);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Hover effect for skill icon */
 .skill-box:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     box-shadow: 0 0 10px #7ea38f;
-
 }
 
+/* Icon size */
 .skill-box img {
-    width: clamp(40px, 6vw, 70px);
-    height: clamp(40px, 6vw, 70px);
+    width: clamp(40px, 5vw, 70px);
+    height: clamp(40px, 5vw, 70px);
     object-fit: contain;
-    cursor: pointer;
-}
-
-@media (max-width: 800px) {
-    .skills-content h1 {
-        font-size: 2rem;
-        font-weight: 900;
-    }
-
-    .skill-box img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-        cursor: pointer;
-
-    }
-
-    .skills-content {
-        margin-bottom: -45%;
-    }
-
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-items: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
+    pointer-events: none;
 }
