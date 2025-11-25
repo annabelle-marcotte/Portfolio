@@ -72,17 +72,17 @@ const ContactsContent = () => {
                     <div className="social-links">
                         <div className="icon-box">
                             <a href="https://www.linkedin.com/in/annabelle-marcotte/" target="_blank" rel="noopener noreferrer">
-                                <img src="/links/linkedin.png" alt="linkedin" />
+                                <img src="/links/linkedin.png" alt="linkedin" title="Linkedin"/>
                             </a>
                         </div>
                         <div className="icon-box">
                             <a href="https://github.com/annabelle-marcotte/" target="_blank" rel="noopener noreferrer">
-                                <img src="/links/github.png" alt="github" />
+                                <img src="/links/github.png" alt="github" title="Github" />
                             </a>
                         </div>
                         <div className="icon-box">
                             <a href="mailto:aj.marcotte@icloud.com">
-                                <img src="/contact/mail.png" alt="mail" />
+                                <img src="/contact/mail.png" alt="mail" title={t("email")} />
                             </a>
                         </div>
                     </div>

@@ -57,6 +57,7 @@ const HomeContent = () => {
                         href="https://www.linkedin.com/in/annabelle-marcotte/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="Linkedin"
                     >
                         <img src="/links/linkedin.png" alt="linkedin" />
                     </a>
@@ -64,6 +65,7 @@ const HomeContent = () => {
                         href="https://github.com/annabelle-marcotte/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="Github"
                     >
                         <img src="/links/github.png" alt="github" />
                     </a>

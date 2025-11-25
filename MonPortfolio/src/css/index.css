@@ -74,6 +74,7 @@ header a {
     border-bottom: 3px solid transparent;
     transition: transform 0.2s ease;
     text-shadow: #a1cfb6 0px 0px 5px;
+    -webkit-text-stroke: 0.02px black;
 }
 
 .logo {
