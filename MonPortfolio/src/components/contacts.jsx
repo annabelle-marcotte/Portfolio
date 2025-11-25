@@ -38,7 +38,6 @@ const ContactsContent = () => {
             <div className="contacts-header">
                 <h1>{t("contact_title")}</h1>
             </div>
-
             <div className="contacts-content">
                 <div className="info-me">
                     <h3>{t("contact_info_title")}</h3>
@@ -53,7 +52,6 @@ const ContactsContent = () => {
                             </span>
                         </div>
                     </div>
-
                     <div className="contact-item">
                         <img src="/contact/phone.png" alt="phone" />
                         <div>

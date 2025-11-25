@@ -27,14 +27,12 @@
 
 }
 
-.about-line {
-    width: 0;
-    height: 5px;
-    margin: 40px auto 0;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #86b499, #c0e0c6);
-    opacity: 0;
-    transition: width 0.8s ease-out, opacity 0.8s ease-out;
+.about-line2 { 
+    width: 100%;
+    height: 20px;
+    background-color: #7ea38f;
+        z-index: 99;
+            background-size: 200% 100%;
 }
 
 .about-line.visible {
@@ -123,6 +121,9 @@
     -webkit-user-drag: none;
     pointer-events: none;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
 }
 
 .imageloop--scale-hover .imageloop__item {
@@ -201,7 +202,7 @@
 
     .description-about {
     padding: 100px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     cursor: default;

@@ -80,6 +80,7 @@ header a {
     color: #86b499;
     font-weight: 900;
     text-shadow: none;
+    cursor: pointer;
 }
 
 nav a:hover,

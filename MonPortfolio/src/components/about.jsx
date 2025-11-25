@@ -7,7 +7,7 @@ function AboutContent() {
     const { t } = useTranslation();
 
     const Img = [
-        { src: '/about-pictures/eclipse.JPEG', alt: 'Eclipse'},
+        { src: '/about-pictures/eclipse.JPEG', alt: 'Eclipse' },
         { src: '/about-pictures/ski-2024.JPEG', alt: 'Ski 2024' },
         { src: 'about-pictures/ski-hill.JPEG', alt: 'Ski Hill' },
         { src: '/about-pictures/ski.JPEG', alt: 'Ski' },
@@ -54,13 +54,24 @@ function AboutContent() {
             elements.forEach((el) => observer.unobserve(el));
         };
     }, []);
+    useEffect(() => {
+        const blockContext = (e) => {
+            if (e.target.tagName === "IMG") {
+                e.preventDefault();
+            }
+        };
+        document.addEventListener("contextmenu", blockContext);
+
+        return () => document.removeEventListener("contextmenu", blockContext);
+    }, []);
+
 
     return (
         <div className="about-content">
             <div className="about-picture">
                 <ImageLoop
                     images={Img}
-                    speed={0.1}
+                    speed={0.16}
                     imageHeight={275}
                     gap={20}
                     fadeOutColor="#7ea38f"
@@ -70,9 +81,10 @@ function AboutContent() {
             <div className="description-about">
                 <h1>{t('about_title')}</h1>
                 <h3>{t('about_subtitle')}</h3>
-                <p>{t('about_paragraph')}</p>
+                <p>{t('about_paragraph1')}</p><br />
+                <p>{t('about_paragraph2')}</p>
             </div>
-            <div className="contact-divider"></div>
+            <div className="about-line2"></div>
         </div>
     );
 }

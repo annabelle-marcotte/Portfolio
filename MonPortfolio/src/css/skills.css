@@ -9,7 +9,7 @@
 }
 
 .skills-content h1 {
-    font-size: clamp(1.8rem, 4vw, 3rem); 
+    font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 900;
     color: white;
     text-align: center;
@@ -32,10 +32,10 @@
     margin: 50px 0 150px 0;
 }
 
-.section-skills > div {
+.section-skills>div {
     position: relative;
     background-color: white;
-    color:#7ea38f;
+    color: #7ea38f;
     border-radius: 12px;
     text-align: center;
     width: auto;
@@ -52,24 +52,25 @@
     transition: height 1s ease-out, opacity 1s ease-out, padding 1s ease-out;
 }
 
-.section-skills > div h2 {
+.section-skills>div h2 {
     margin: 0 0 15px 0;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 800;
     color: #7ea38f;
 }
 
-.section-skills > div.visible {
-    min-height: 400px; 
+.section-skills>div.visible {
+    min-height: 400px;
     opacity: 1;
     padding: 20px;
 }
 
-.section-skills > div:hover{
+.section-skills>div:hover {
     transform: scale(1.01);
     box-shadow: 0 0 10px #fff;
     transition: 0.4s ease;
 }
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -91,72 +92,42 @@
 }
 
 .skill-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 0 10px #7ea38f;
 
 }
 
 .skill-box img {
-    width: clamp(40px, 6vw, 70px); 
+    width: clamp(40px, 6vw, 70px);
     height: clamp(40px, 6vw, 70px);
     object-fit: contain;
     cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-    .section-skills > div.visible {
-        min-height: 380px; 
-    }
-}
-
-
-
 @media (max-width: 800px) {
     .skills-content h1 {
-    font-size: 2rem;
-    font-weight: 900;
-}
-.skill-box img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    cursor: pointer;
-    
-}
-.skills-content {
-    margin-bottom: -45%;
-}
+        font-size: 2rem;
+        font-weight: 900;
+    }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:10px;
-    justify-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+    .skill-box img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        cursor: pointer;
 
-}
+    }
 
-@media (max-width: 1200px) {
-    .skills-content h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-}
-.skill-box img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    cursor: pointer;
-}
-.section-skills>div.visible {
-    height: 415px;
-    opacity: 1;
-    padding: 20px;
+    .skills-content {
+        margin-bottom: -45%;
+    }
 
-}
-
-.skills-content {
-    margin-bottom: -20%;
-}
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }

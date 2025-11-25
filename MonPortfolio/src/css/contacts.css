@@ -65,6 +65,7 @@ section {
 
 .info-me {
     flex: 1;
+    -webkit-text-stroke: 0.2px black;
 }
 
 .info-me h3 {
@@ -76,7 +77,7 @@ section {
 .info-me p {
     color: black;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 1rem;
 }
 
@@ -84,18 +85,19 @@ section {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .contact-item a {
     text-decoration: none;
     color: #0f172a;
-    transition: color 0.3 ease;
+    transition: color 0.3  transform 0.5 ease;
 }
 
 .contact-item a:hover {
-    color: #a1cfb6;
+    color: #7ea38f;
     text-decoration: underline;
+    transform: scale(1.02);
 }
 
 .contact-item img {
@@ -183,6 +185,7 @@ section {
     font-size: 1rem;
     margin-bottom: 15px;
     outline: none;
+    font-family: "Poppins", sans-serif;
 }
 
 .user-content textarea {
