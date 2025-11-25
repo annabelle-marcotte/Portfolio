@@ -6,7 +6,9 @@
     "menu_contacts": "Contact",
     "about_title": "About",
     "about_subtitle": "Full Stack Developer",
-    "about_paragraph": "I’m a Computer Science student and Full Stack developer with a strong passion for learning and web development. What motivates me most is discovering, understanding, and continuously learning about anything. Outside of coding, I love alpine skiing, traveling, and exploring new cultures, as they help me broaden my perspective and see the world differently.",
+    "about_paragraph1": "I am a Computer Science Technology student and a Full Stack developer passionate about learning and web development. What motivates me most is constantly discovering, understanding, and learning.",
+    "about_paragraph2": "Outside of IT, I love skiing, traveling, and exploring new cultures, as it broadens my horizons and allows me to see the world differently.",
+    
     "home_greeting": "Hello, I'm <span>Annabelle</span>",
     "home_typing_words": [
         "Full Stack developer.",
@@ -17,7 +19,7 @@
     "home_cv_button": "View my CV",
     "email": "Email",
     "contact_title": "Contact",
-    "contact_info_title": "Contact Information",
+    "contact_info_title": "Information",
     "contact_info_text": "Feel free to reach out to me through any of the following channels. I will respond as soon as possible!",
     "contact_email": "Email",
     "contact_phone": "Phone",
@@ -53,6 +55,6 @@
     "skills_tools": "Tools",
     "menu_education": "Education",
     "education_title": "My Education",
-    "education_program": "Computer Science Techniques",
-    "education_description": "College Diploma (DEC) in Computer Science<br />Lionel-Groulx College, in progress"
+    "education_program": "Computer Science",
+    "education_description": "College Diploma (DEC) in Computer Science<br />Lionel-Groulx College, 2023-2026"
 }
