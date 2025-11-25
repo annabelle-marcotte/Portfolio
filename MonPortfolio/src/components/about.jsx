@@ -42,18 +42,23 @@ function AboutContent() {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');   // play animation
+                    } else {
+                        entry.target.classList.remove('visible'); // reverse animation
+                    }
                 });
             },
             { threshold: 0.3 }
         );
 
-        elements.forEach((el) => observer.observe(el));
+        elements.forEach(el => observer.observe(el));
 
         return () => {
-            elements.forEach((el) => observer.unobserve(el));
+            elements.forEach(el => observer.unobserve(el));
         };
     }, []);
+
     useEffect(() => {
         const blockContext = (e) => {
             if (e.target.tagName === "IMG") {

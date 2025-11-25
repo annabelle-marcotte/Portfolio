@@ -4,7 +4,7 @@ import "../css/education.css";
 
 const EducationContent = () => {
     const { t } = useTranslation();
-useEffect(() => {
+    useEffect(() => {
         const elements = document.querySelectorAll(
             '.education-line'
         );
@@ -12,7 +12,11 @@ useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
                 });
             },
             { threshold: 0.3 }
@@ -27,7 +31,7 @@ useEffect(() => {
 
     return (
         <div>
-            
+
             <div className='education-content'>
                 <h1>{t("education_title")}</h1>
                 <div className="education-grid">
