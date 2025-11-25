@@ -6,28 +6,24 @@ const EducationContent = () => {
     const { t } = useTranslation();
     useEffect(() => {
         const elements = document.querySelectorAll(
-            '.education-line'
+            '.education-line, .education-grid, .education-content h1'
         );
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    } else {
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.3 });
 
         elements.forEach((el) => observer.observe(el));
 
-        return () => {
-            elements.forEach((el) => observer.unobserve(el));
-        };
+        return () => elements.forEach((el) => observer.unobserve(el));
     }, []);
+
 
     return (
         <div>

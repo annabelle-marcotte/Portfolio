@@ -9,6 +9,28 @@ const ContactsContent = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [sending, setSending] = useState(false);
     const formRef = useRef(null);
+    useEffect(() => {
+        const elements = document.querySelectorAll(
+            '.contacts-header h1, .info-me, .user-content'
+        );
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+
+        return () => elements.forEach((el) => observer.unobserve(el));
+    }, []);
 
     useEffect(() => {
         if (state.succeeded) {
@@ -72,7 +94,7 @@ const ContactsContent = () => {
                     <div className="social-links">
                         <div className="icon-box">
                             <a href="https://www.linkedin.com/in/annabelle-marcotte/" target="_blank" rel="noopener noreferrer">
-                                <img src="/links/linkedin.png" alt="linkedin" title="Linkedin"/>
+                                <img src="/links/linkedin.png" alt="linkedin" title="Linkedin" />
                             </a>
                         </div>
                         <div className="icon-box">
