@@ -5,7 +5,7 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tenor Sans", sans-serif;
 }
 
 .home-content {
@@ -181,7 +181,7 @@ button:hover a {
 @media (max-width: 800px) {
     .home-content {
         top: 25%;
-        left: 0;
+        left: 2%;
         width: 100%;
     }
 
@@ -189,8 +189,10 @@ button:hover a {
         display: none;
     }
 
-    .metaballs-container {
-        display: none;
+    .metaballs-container canvas {
+        position: absolute;
+        width: 200%;
+        height: 200%;
     }
 
     .typing-text {
@@ -202,18 +204,18 @@ button:hover a {
     .links a {
         width: 3rem;
         height: 3rem;
-        border-color: #86b499;
-        color: #86b499;
+        border-color: white;
+        color: white;
     }
 
     .links a:hover {
-        color: #86b499;
-        background-color: #86b499;
-        box-shadow: 0 0 10px #86b499;
+        color: white;
+        background-color: white;
+        box-shadow: 0 0 10px white;
     }
 
     .links img {
-        filter: brightness(0) saturate(100%) invert(78%) sepia(10%) saturate(469%) hue-rotate(95deg) brightness(90%) contrast(88%);
+        filter: brightness(1);
 
     }
 
@@ -222,30 +224,30 @@ button:hover a {
     }
 
     button {
-        background-color: #86b499;
-        border-color: #86b499;
+        background-color: white;
+        border-color: white;
         margin-top: 2%;
     }
 
     button:hover {
-        background-color: #86b499;
-        box-shadow: 0 0 25px #86b499;
+        background-color: white;
+        box-shadow: 0 0 25px white;
     }
 
     button a {
-        color: white;
+        color: #86b499;
     }
 
     button:hover a {
-        color: white;
+        color: #86b499;
     }
 
     .typing-text span::after {
-        border-left: 1px solid #86b499;
-        background-color: #86b499;
+        border-left: 1px solid white;
+        background-color: white;
     }
 
     span {
-        color: #86b499;
+        color: white;
     }
 }

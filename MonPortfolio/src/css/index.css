@@ -41,7 +41,7 @@ header {
     z-index: 100;
     /* filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12)); */
 
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tenor Sans", sans-serif;
     font-weight: 600;
 }
 
@@ -73,8 +73,6 @@ header a {
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
     border-bottom: 3px solid transparent;
     transition: transform 0.2s ease;
-    /* text-shadow: #a1cfb6 0px 0px 5px; */
-    -webkit-text-stroke: 0.02px black;
 }
 
 .logo {
@@ -154,8 +152,8 @@ main {
         background-color: transparent;
         border: 3px solid #a1cfb6;
         color: black;
-        padding: 4px 8px;
-        border-radius: 6px;
+        margin-left: -80px;
+        padding: 6px 10px;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -234,7 +232,6 @@ main {
         transition: color 0.3s ease, border-bottom-color 0.3s ease;
         border-bottom: 3px solid transparent;
         transition: transform 0.2s ease;
-        text-shadow: white 0px 0px 5px;
 
         backdrop-filter: blur(4px) !important; 
         -webkit-backdrop-filter: blur(4px) !important;
@@ -244,7 +241,6 @@ main {
     .logo {
         color: #86b499;
         font-weight: 900;
-        text-shadow: none;
     }
 
     nav a:hover,
@@ -253,6 +249,5 @@ main {
         border-bottom-color: #6d907d;
         cursor: pointer;
         transform: scale(1.05);
-        text-shadow: #6d907d 0px 0px 2px;
     }
 }

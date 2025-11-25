@@ -9,6 +9,7 @@ const ContactsContent = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [sending, setSending] = useState(false);
     const formRef = useRef(null);
+
     useEffect(() => {
         const elements = document.querySelectorAll(
             '.contacts-header h1, .info-me, .user-content'
@@ -32,27 +33,41 @@ const ContactsContent = () => {
         return () => elements.forEach((el) => observer.unobserve(el));
     }, []);
 
+
+    const prevSucceededRef = useRef(false);
+
     useEffect(() => {
-        if (state.succeeded) {
-            setShowPopup(true);
+    if (!prevSucceededRef.current && state.succeeded) {
+        formRef.current?.reset();
+        setShowPopup(true);
 
-            if (formRef.current) {
-                formRef.current.reset();
-            }
+        const timer = setTimeout(() => {
+            setShowPopup(false);
+            state.succeeded = false;
+        }, 3000);
 
-            const timer = setTimeout(() => setShowPopup(false), 3000);
-            return () => clearTimeout(timer);
-        }
-    }, [state.succeeded]);
+        prevSucceededRef.current = true;
+
+        return () => clearTimeout(timer);
+    }
+
+    if (state.submitting) {
+        prevSucceededRef.current = false;
+    }
+});
+
+
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setSending(true);
+        prevSucceededRef.current = false;
 
         await handleSubmit(event);
 
         setTimeout(() => setSending(false));
     };
+
 
     return (
         <div>
