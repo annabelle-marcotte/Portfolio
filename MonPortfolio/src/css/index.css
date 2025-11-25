@@ -25,11 +25,6 @@
 }
 
 header {
-    background: rgba(255, 255, 255, 0.37);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(4px);
-    border-bottom: 1px solid white;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -39,11 +34,22 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    /* filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12)); */
-
     font-family: "Tenor Sans", sans-serif;
     font-weight: 600;
+    background: transparent;
 }
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid white;
+    z-index: -1;
+}
+
 
 header>a {
     text-decoration: none;
@@ -82,6 +88,8 @@ header a {
     font-size: 2.3rem;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
+    background: transparent;
+
 }
 
 nav a:hover,

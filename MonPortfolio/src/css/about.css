@@ -67,7 +67,8 @@
 .imageloop {
     position: relative;
     overflow-x: hidden;
-
+    pointer-events: none;
+  -webkit-touch-callout: none;
     --imageloop-gap: 32px;
     --imageloop-imageHeight: 28px;
     --imageloop-fadeColorAuto: #ffffff;
@@ -123,6 +124,8 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     -webkit-user-drag: none;
+    pointer-events: none;
+    -webkit-touch-callout: none;
     user-drag: none;
 }
 

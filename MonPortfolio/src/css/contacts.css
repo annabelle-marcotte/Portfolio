@@ -382,6 +382,7 @@ section {
 
     .icon-box img {
         width: 20px;
+        margin-top: 6px;
         height: 20px;
     }
 }
