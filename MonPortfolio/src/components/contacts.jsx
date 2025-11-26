@@ -37,16 +37,15 @@ const ContactsContent = () => {
     const prevSucceededRef = useRef(false);
 
     useEffect(() => {
-    if (!prevSucceededRef.current && state.succeeded) {
+    if (state.succeeded) {
         formRef.current?.reset();
         setShowPopup(true);
 
         const timer = setTimeout(() => {
             setShowPopup(false);
-            state.succeeded = false;
         }, 3000);
-
-        prevSucceededRef.current = true;
+        
+        prevSucceededRef.current = false;
 
         return () => clearTimeout(timer);
     }
@@ -54,7 +53,8 @@ const ContactsContent = () => {
     if (state.submitting) {
         prevSucceededRef.current = false;
     }
-});
+}, [state.succeeded, state.submitting]);
+
 
 
 

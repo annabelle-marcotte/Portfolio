@@ -141,6 +141,7 @@ section {
 .icon-box img {
     width: 24px;
     height: 24px;
+    margin-top: 6px;
     filter: brightness(0) invert(1);
 }
 
