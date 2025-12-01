@@ -177,7 +177,7 @@ main {
         top: 100%;
         right: 0;
         width: clamp(200px, 60%, 300px);
-        /* Adaptive width */
+        
         background-color: #86b499;
         border-left: 3px solid white;
         border-bottom: 3px solid white;
@@ -206,7 +206,7 @@ main {
         border-bottom-color: white;
         cursor: pointer;
         transform: scale(1.05);
-        /* text-shadow: #6d907d 0px 0px 2px; */
+        
     }
 }
 

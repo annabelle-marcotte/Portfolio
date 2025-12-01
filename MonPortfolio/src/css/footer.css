@@ -61,7 +61,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Align left */
+    
     text-align: left;
     gap: 12px;
 }
@@ -143,19 +143,29 @@ footer {
         text-align: center;
         gap: 35px;
     }
+    .footer-column .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
 
     .footer-column h2,
     .quick-links h1 {
         font-size: 1.4rem;
     }
 
-    .contact-info .contact-item {
-        justify-content: center;
-    }
-
     .quick-links a {
         text-align: center;
         font-size: 1rem;
+    }
+    .contact-info .contact-item {
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
     }
 }
 
