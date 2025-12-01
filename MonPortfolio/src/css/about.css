@@ -1,4 +1,3 @@
-
 .description-about {
     padding: 100px;
     width: 50%;
@@ -27,12 +26,12 @@
 
 }
 
-.about-line2 { 
+.about-line2 {
     width: 100%;
     height: 20px;
     background-color: #7ea38f;
-        z-index: 99;
-            background-size: 200% 100%;
+    z-index: 99;
+    background-size: 200% 100%;
 }
 
 .about-line.visible {
@@ -68,7 +67,7 @@
     position: relative;
     overflow-x: hidden;
     pointer-events: none;
-  -webkit-touch-callout: none;
+    -webkit-touch-callout: none;
     --imageloop-gap: 32px;
     --imageloop-imageHeight: 28px;
     --imageloop-fadeColorAuto: #ffffff;
@@ -204,42 +203,43 @@
 @media (max-width: 1200px) {
 
     .description-about {
-    padding: 100px;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    cursor: default;
-}
+        padding: 100px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        cursor: default;
+    }
 
-.description-about h1 {
-    font-size: 3rem;
-}
+    .description-about h1 {
+        font-size: 3rem;
+    }
 
 }
 
 @media (max-width: 800px) {
     .description-about {
-    width: 100%;
-    text-align: center;
-    cursor: default;
-}
-.description-about h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 30px;
-    margin-top: -15%;
-    color: #86b499;
-}
+        width: 100%;
+        text-align: center;
+        cursor: default;
+    }
 
-.description-about h3 {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
+    .description-about h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+        margin-top: -15%;
+        color: #86b499;
+    }
 
-.description-about p {
-    font-size: 17px;
+    .description-about h3 {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
 
-}
+    .description-about p {
+        font-size: 17px;
+
+    }
 
 }

@@ -38,7 +38,13 @@ export default function CustomCursor() {
                 ".meta-balls",
                 ".meta-balls-contacts",
                 ".education-grid",
-                ".user-content"
+                ".user-content",
+                ".skill-box",
+                ".about-picture",
+                ".home-container"
+            ];
+            const whiteAreas =[
+                ".section-skills"
             ];
             if (whiteSections.includes(section.id)) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
@@ -48,7 +54,7 @@ export default function CustomCursor() {
                 cursor.style.background = "rgba(255,255,255,0.35)";
                 cursor.style.border = "1px solid rgba(255,255,255,0.6)";
             }
-            else if(element?.closest(".section-skills")) {
+            if (whiteAreas.some(sel => element.closest(sel))) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
                 cursor.style.border = "1px solid rgba(126,163,143,0.6)";
             }
