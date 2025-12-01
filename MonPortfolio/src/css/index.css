@@ -43,7 +43,7 @@ header::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.37);
+    background: rgba(255, 255, 255, 0.37);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-bottom: 1px solid white;
@@ -196,7 +196,17 @@ main {
     }
 
     nav a {
-        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: white;
+        border-bottom-color: white;
+        cursor: pointer;
+        transform: scale(1.05);
+        /* text-shadow: #6d907d 0px 0px 2px; */
     }
 }
 
@@ -241,7 +251,7 @@ main {
         border-bottom: 3px solid transparent;
         transition: transform 0.2s ease;
 
-        backdrop-filter: blur(4px) !important; 
+        backdrop-filter: blur(4px) !important;
         -webkit-backdrop-filter: blur(4px) !important;
         border: 1px solid rgba(255, 255, 255, 0.03) !important;
     }
