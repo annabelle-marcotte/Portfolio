@@ -42,9 +42,11 @@ export default function CustomCursor() {
                 ".skill-box",
                 ".about-picture",
                 ".home-container"
+
             ];
-            const whiteAreas =[
-                ".section-skills"
+            const whiteAreas = [
+                ".section-skills",
+                ".home-container button"
             ];
             if (whiteSections.includes(section.id)) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
@@ -54,7 +56,8 @@ export default function CustomCursor() {
                 cursor.style.background = "rgba(255,255,255,0.35)";
                 cursor.style.border = "1px solid rgba(255,255,255,0.6)";
             }
-            if (whiteAreas.some(sel => element.closest(sel))) {
+            if (whiteAreas.some(sel =>
+                element.closest(sel) || element.matches(sel))) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
                 cursor.style.border = "1px solid rgba(126,163,143,0.6)";
             }
