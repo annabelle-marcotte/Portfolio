@@ -15,7 +15,7 @@ import MetaBalls from './assets/ball';
 function App() {
   return (
     <ClickSpark
-      sparkColor="black"
+      sparkColor="#91c0a6"
       sparkSize={10}
       sparkRadius={15}
       sparkCount={8}
@@ -44,6 +44,7 @@ function App() {
 
       <section id="about">
         <MetaBalls
+
           color="#acd0bd"
           cursorBallColor="#7ea38f"
           cursorBallSize={0}
@@ -69,7 +70,7 @@ function App() {
         <ExperienceContent />
       </section> */}
       <section id="education">
-        
+
         <EducationContent />
       </section>
       <section id="contacts">

@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'  // ✅ important
+import { BrowserRouter } from 'react-router-dom'
+import CustomCursor from './assets/customCursor';
 import '/src/css/index.css'
 import App from './App.jsx'
 
@@ -8,6 +9,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <App />
+      <CustomCursor />
     </BrowserRouter>
   </StrictMode>,
 )
