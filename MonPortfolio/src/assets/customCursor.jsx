@@ -10,7 +10,6 @@ export default function CustomCursor() {
 
             const element = document.elementFromPoint(e.clientX, e.clientY);
 
-            // --- MAGNETIC SNAP FOR LINKS ---
             const link = element?.closest("a");
             if (link) {
                 const rect = link.getBoundingClientRect();
@@ -22,20 +21,25 @@ export default function CustomCursor() {
             } else {
                 cursor.style.transform = "translate(-50%, -50%) scale(1)";
             }
-            
+
             if (element?.closest("header")) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
                 cursor.style.border = "1px solid rgba(126,163,143,0.6)";
                 return;
             }
 
-            // 3. NORMAL SECTION LOGIC
             const section = element?.closest("section");
             if (!section) return;
 
             const whiteSections = ["home", "about", "education", "contacts"];
             const greenSections = ["skills", "footer"];
-
+            const greenAreas = [
+                ".meta-balls-test",
+                ".meta-balls",
+                ".meta-balls-contacts",
+                ".education-grid",
+                ".user-content"
+            ];
             if (whiteSections.includes(section.id)) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
                 cursor.style.border = "1px solid rgba(126,163,143,0.6)";
@@ -44,15 +48,15 @@ export default function CustomCursor() {
                 cursor.style.background = "rgba(255,255,255,0.35)";
                 cursor.style.border = "1px solid rgba(255,255,255,0.6)";
             }
-            else if (element?.closest(".section-skills")) {
+            else if(element?.closest(".section-skills")) {
                 cursor.style.background = "rgba(126,163,143,0.35)";
                 cursor.style.border = "1px solid rgba(126,163,143,0.6)";
-
             }
-
-
+            if (greenAreas.some(sel => element.closest(sel))) {
+                cursor.style.background = "rgba(255,255,255,0.35)";
+                cursor.style.border = "1px solid rgba(255,255,255,0.6)";
+            }
         };
-
         document.addEventListener("mousemove", handleMove);
         return () => document.removeEventListener("mousemove", handleMove);
     }, []);

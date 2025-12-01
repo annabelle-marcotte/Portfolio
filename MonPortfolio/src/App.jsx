@@ -25,6 +25,7 @@ function App() {
 
       <section id="home" className="home-container">
         <MetaBalls
+        className='meta-balls-test'
           color="#7ea38f"
           cursorBallColor="#7ea38f"
           cursorBallSize={0}
@@ -89,7 +90,10 @@ function App() {
         />
         <ContactsContent />
       </section>
-      <FooterContent />
+      <section id="footer">
+        <FooterContent />
+      </section>
+
     </ClickSpark>
   );
 }
